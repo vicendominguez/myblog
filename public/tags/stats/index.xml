@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stats on VicenDominguez</title>
+    <link>//localhost:1313/tags/stats/</link>
+    <description>Recent content in Stats on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 11 Nov 2014 14:50:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/stats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>memcached-zabbix-template monitor</title>
+      <link>//localhost:1313/posts/memcached-zabbix-template-monitor/</link>
+      <pubDate>Tue, 11 Nov 2014 14:50:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/memcached-zabbix-template-monitor/</guid>
+      <description>&lt;p&gt;This is a minimal template to get info from your Memcached server from two possible places. Via zabbix-agentd in clients or via externalscripts in zabbix server. Choose your option.&lt;/p&gt;&#xA;&lt;p&gt;Monitoring information by now:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;lsquo;bytes&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;cmd_get&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;cmd_set&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;curr_items&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;curr_connections&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;rsquo;limit_maxbytes&#39;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;uptime&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;get_hits&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;get_misses&amp;rsquo;,&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;And the special HIT-ratio in %:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;lsquo;ratio&amp;rsquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;installation-in-the-zabbix-server&#34;&gt;Installation in the Zabbix Server&lt;/h2&gt;&#xA;&lt;p&gt;You should look for the external scripts directory in your Zabbix Server configuration file. In the CentOS 6.5 RPM Zabbix installation is: &lt;code&gt;/usr/lib/zabbix/externalscripts&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fast stats from glassfish server.log </title>
+      <link>//localhost:1313/posts/fast-stats-from-glassfish-server.log/</link>
+      <pubDate>Thu, 16 Oct 2014 13:57:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fast-stats-from-glassfish-server.log/</guid>
+      <description>&lt;p&gt;Very fast Python script to take a quick look at your GlassFish server.log file.&lt;/p&gt;&#xA;&lt;p&gt;Output:&lt;/p&gt;&#xA;&lt;p&gt;Fecha Inicio: [2014-10-13T23:54:54.372+0200]&#xA;Fecha Fin: [2014-10-16T13:46:22.230+0200]&#xA;Total INFO: 826&#xA;Total WARN: 126&#xA;Total SEVERE: 2341&#xA;Total ERROR: 96&#xA;Total Processing: 3389&#xA;Total Exceptions: 0&#xA;Total logfile lines: 13646&lt;/p&gt;&#xA;&lt;p&gt;The script:&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/5c54eb26cdf747662453.js&#34;&gt;&lt;/script&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>collectd-web for CentOS 6.5</title>
+      <link>//localhost:1313/posts/collectd-web-for-centos-6.5/</link>
+      <pubDate>Thu, 04 Sep 2014 16:49:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/collectd-web-for-centos-6.5/</guid>
+      <description>&lt;p&gt;There are RPM packages for collectd in CentOS 6.x, you will need the EPEL repository.&lt;/p&gt;&#xA;&lt;p&gt;If you want an easy web interface to the graphs, there is a &lt;code&gt;collectd-web&lt;/code&gt; package available, but that package actually refers to the &lt;a href=&#34;https://collectd.org/wiki/index.php/Collection_3&#34;&gt;collection3 frontend&lt;/a&gt;. If you prefer the original &lt;a href=&#34;http://collectdweb.appspot.com/&#34;&gt;collectd-web&lt;/a&gt;, then you will need to install it from its &lt;a href=&#34;https://github.com/httpdss/collectd-web&#34;&gt;GitHub site&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The most important thing is to create the &lt;code&gt;/etc/collectd/collection.conf&lt;/code&gt; file. Be careful; if you want to change the path, you will need to modify the sources.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

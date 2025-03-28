@@ -1,0 +1,24 @@
+<nav class="menu">
+    <div class="menu__inner">
+        {{- $currentPage := . -}}
+        {{ range sort .Site.Menus.main ".Identifier" -}}
+            <a href="{{ .URL | relLangURL }}" class="menu__item">{{ .Name }}</a>
+        {{- end }}
+
+        {{- if .Site.Params.EnableGlobalLanguageMenu }}
+        <div class="submenu">
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn menu__item">{{ .Language }}</a>
+                <div class="dropdown-content">
+                    {{- if hugo.IsMultilingual }}
+                        {{ range $.Translations }}
+                            <a title="{{ .Language }}" href="{{ .Permalink }}" class="menu__item">{{ .Language }}</a>
+                        {{ end }}
+                    {{- end }}
+                </div>
+            </div>
+        </div>
+        {{- end }}
+    </div>
+</nav>
+

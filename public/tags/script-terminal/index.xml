@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Script Terminal on VicenDominguez</title>
+    <link>//localhost:1313/tags/script-terminal/</link>
+    <description>Recent content in Script Terminal on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 27 Jan 2015 07:26:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/script-terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fast access to the history host table of Netcraft site from terminal</title>
+      <link>//localhost:1313/posts/fast-access-to-the-history-host-table-of-netcraft-site-from-terminal/</link>
+      <pubDate>Tue, 27 Jan 2015 07:26:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fast-access-to-the-history-host-table-of-netcraft-site-from-terminal/</guid>
+      <description>&lt;p&gt;Fast and ugly but it works. Useful for detecting old IPs and system OS. Netcraft history host table from terminal:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzSell3-YyYE3HskXs-kL2MSwqoelIIFnaohEXHI6OVeQK7tyFjjcaEM1lLKxSkV2KU23OSeHLkdedcxhuTrYjwOGwKhnzvhCGCkB3N9dA1qHnpj3iZxHNqWR1S9VeMYCDk9peJbcr97o/s1600/netcraftscraper.png&#34; alt=&#34;Netcraft Scraper&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Netcraft uses javascript so I chose casperjs for the scraper:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/2f9203ff473fc1702281.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Process monitor template with logger and email notifier (daemonized)</title>
+      <link>//localhost:1313/posts/process-monitor-template-with-logger-and-email-notifier-daemonized/</link>
+      <pubDate>Wed, 24 Sep 2014 14:08:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/process-monitor-template-with-logger-and-email-notifier-daemonized/</guid>
+      <description>&lt;p&gt;If you are looking for a template to write a fast copy-and-paste script (daemonized) for monitoring one process&amp;hellip; you can get some ideas from this:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/b2421fd06ad7e466584c.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Searching full anonymous proxies </title>
+      <link>//localhost:1313/posts/searching-full-anonymous-proxies/</link>
+      <pubDate>Tue, 14 May 2013 09:48:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/searching-full-anonymous-proxies/</guid>
+      <description>&lt;p&gt;I have created a PoC to try to get full anonymous proxies. This script discovers if your IP is fully changed and anonymous using a proxy. It works via NSE by NMAP.&lt;/p&gt;&#xA;&lt;p&gt;I wrote one post about it in Spanish here: &lt;a href=&#34;http://www.securityartwork.es/2013/05/14/a-vueltas-con-la-deteccion-de-proxys/&#34;&gt;Security Artwork&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The PoC source code is available here: &lt;a href=&#34;https://github.com/vicendominguez/http-open-proxy-anon&#34;&gt;GitHub repository&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;:)&lt;/p&gt;&#xA;&lt;p&gt;Vte&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

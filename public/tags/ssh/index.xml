@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh on VicenDominguez</title>
+    <link>//localhost:1313/tags/ssh/</link>
+    <description>Recent content in Ssh on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 05 Dec 2014 14:55:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible: Generating a SSH pub key file and uploading to other host to sync files from there</title>
+      <link>//localhost:1313/posts/ansible-generating-a-ssh-pub-key-file-and-uploading-to-other-host-to-sync-files-from-there/</link>
+      <pubDate>Fri, 05 Dec 2014 14:55:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ansible-generating-a-ssh-pub-key-file-and-uploading-to-other-host-to-sync-files-from-there/</guid>
+      <description>&lt;h1 id=&#34;update&#34;&gt;Update&lt;/h1&gt;&#xA;&lt;p&gt;Check the comments for new workflows.&lt;/p&gt;&#xA;&lt;p&gt;Original from 19/May/2014&amp;hellip; updated!&lt;/p&gt;&#xA;&lt;p&gt;I found this workflow for our systems:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Up the new box.&lt;/li&gt;&#xA;&lt;li&gt;Generate keys in that new box.&lt;/li&gt;&#xA;&lt;li&gt;&amp;ldquo;Fetch&amp;rdquo; the pub key from the new server to the ansible server.&lt;/li&gt;&#xA;&lt;li&gt;Copy that key to authorized_keys file of the other server (from ansible server).&lt;/li&gt;&#xA;&lt;li&gt;Execute a rsync from the new server without asking key to the other server.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;My trick is:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vi on VicenDominguez</title>
+    <link>//localhost:1313/tags/vi/</link>
+    <description>Recent content in Vi on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 21 Apr 2016 09:43:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/vi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git commit  and the error: There was a problem with the editor &#34;vi&#34;.</title>
+      <link>//localhost:1313/posts/git-commit--and-the-error-there-was-a-problem-with-the-editor-vi./</link>
+      <pubDate>Thu, 21 Apr 2016 09:43:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/git-commit--and-the-error-there-was-a-problem-with-the-editor-vi./</guid>
+      <description>&lt;p&gt;Error message:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;error: There was a problem with the editor &amp;#39;vi&amp;#39;.&#xA;Please supply the message using either -m or -F option.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Quick solution:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global core.editor &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;which vim&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Short-reason: If you are using vundle, or similar, you could find this error.&lt;/p&gt;&#xA;&lt;p&gt;Issue: &lt;a href=&#34;https://github.com/VundleVim/Vundle.vim/issues/167&#34;&gt;https://github.com/VundleVim/Vundle.vim/issues/167&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

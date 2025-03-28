@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Config File on VicenDominguez</title>
+    <link>//localhost:1313/tags/config-file/</link>
+    <description>Recent content in Config File on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 03 Jul 2014 14:09:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/config-file/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Changing ONBOOT value in RHEL/CentOS with networkmanager enabled.</title>
+      <link>//localhost:1313/posts/changing-onboot-value-in-rhelcentos-with-networkmanager-enabled./</link>
+      <pubDate>Thu, 03 Jul 2014 14:09:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/changing-onboot-value-in-rhelcentos-with-networkmanager-enabled./</guid>
+      <description>&lt;p&gt;Sometimes the RHEL world has odd things. For example:&lt;/p&gt;&#xA;&lt;p&gt;If you want to configure a network interface using NetworkManager (without X!!!) you can do it with &lt;code&gt;system-config-network&lt;/code&gt; script. From here, you can change the network configuration and DNS/hostname of the box.&lt;/p&gt;&#xA;&lt;p&gt;What is the problem then?&lt;/p&gt;&#xA;&lt;p&gt;The network interfaces could be enabled or disabled in boot time. You can see that in the configuration file (&lt;code&gt;etc/sysconfig/network-scripts/ifcfg-&amp;lt;interfacename&amp;gt;&lt;/code&gt;). It is something like:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Myloader: resolving errors with no clear message</title>
+      <link>//localhost:1313/posts/myloader-resolving-errors-with-no-clear-message/</link>
+      <pubDate>Wed, 12 Mar 2014 13:44:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/myloader-resolving-errors-with-no-clear-message/</guid>
+      <description>&lt;p&gt;If you have a special configuration in mysqld (no default config) perhaps you will find these two cases of error working with myloader tool:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;The first issue looks like a problem with the backup file&amp;hellip;&amp;hellip; but it is not. Message:&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;** (myloader:42526): CRITICAL **: cannot open file vcadminweb.message.sql.gz (24)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;* (myloader:46190): CRITICAL&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;In my case, I needed to check and to change the open files:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ulimit -n 10000     ... and solved!&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;The second one looks like a problem accessing to the database&amp;hellip;. but it is not. Message:&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;**: Error switching to database CMSB076 whilst restoring table multidevicevideo_players&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;In my case, it was a timewait very low in the mysqld config.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Glassfish 4 tricks on CentOS 6</title>
+      <link>//localhost:1313/posts/glassfish-4-tricks-on-centos-6/</link>
+      <pubDate>Wed, 05 Mar 2014 15:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/glassfish-4-tricks-on-centos-6/</guid>
+      <description>&lt;p&gt;Three tricks here.&lt;/p&gt;&#xA;&lt;p&gt;One. Init.d script for CentOS 6:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/9089718.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;Two. Changing umask permission in Glassfish 4:&lt;/p&gt;&#xA;&lt;p&gt;Add &amp;ldquo;umask 002&amp;rdquo; just before the &amp;ldquo;exec&amp;rdquo; line in $GLASSFISH_HOME/bin/asadmin&lt;/p&gt;&#xA;&lt;p&gt;Three. Changing general logging file in Glassfish 4:&lt;/p&gt;&#xA;&lt;p&gt;Change logging.properties file line to (by example):&lt;/p&gt;&#xA;&lt;p&gt;com.sun.enterprise.server.logging.GFFileHandler.file=/var/log/glassfish/server.log&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CentOS SPEC files repo created</title>
+      <link>//localhost:1313/posts/centos-spec-files-repo-created/</link>
+      <pubDate>Tue, 11 Feb 2014 14:22:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/centos-spec-files-repo-created/</guid>
+      <description>&lt;p&gt;I have created a new repo with some of my SPEC files for CentOS:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/vicendominguez/CentOS-SPECS&#34;&gt;https://github.com/vicendominguez/CentOS-SPECS&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;And you can find RPMs packages generated by my SPEC files for CentOS 6 here:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/&#34;&gt;http://repo.enetres.net/repoview/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Dokuwiki &#43; Nginx config file (CentOS 6.4)</title>
+      <link>//localhost:1313/posts/dokuwiki--nginx-config-file-centos-6.4/</link>
+      <pubDate>Thu, 26 Sep 2013 10:29:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/dokuwiki--nginx-config-file-centos-6.4/</guid>
+      <description>&lt;p&gt;It works!&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/8820321.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;:)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Websockets &#43; Nodejs &#43; Nginx</title>
+      <link>//localhost:1313/posts/websockets--nodejs--nginx/</link>
+      <pubDate>Thu, 13 Jun 2013 10:19:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/websockets--nodejs--nginx/</guid>
+      <description>&lt;p&gt;With the latest version of Nginx, it supports HTTP 1.1 with bidirectional websockets. So it is possible to use it with Node.js (for example).&lt;/p&gt;&#xA;&lt;p&gt;A Spanish intro in this post: &lt;a href=&#34;http://www.securityartwork.es/2013/06/13/abstrayendo-websockets-ssl/&#34;&gt;SecurityArtwork&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Here, my minimal-snippets: One plain and one for SSL:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/09d9afbdd23f46890fa4.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>IP2Location.com perl lib</title>
+      <link>//localhost:1313/posts/ip2location.com-perl-lib/</link>
+      <pubDate>Tue, 29 May 2012 10:05:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ip2location.com-perl-lib/</guid>
+      <description>&lt;p&gt;Using the ugly perl library to IP2location file from IP2location.com: &lt;script src=&#34;https://gist.github.com/vicendominguez/8803359.js&#34;&gt;&lt;/script&gt;&#xA;&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/8803359.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;Too old&amp;hellip; I know&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;:)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My tmux.conf</title>
+      <link>//localhost:1313/posts/my-tmux.conf/</link>
+      <pubDate>Sun, 27 May 2012 10:01:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/my-tmux.conf/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;This is my old tmux conf from: &lt;script src=&#34;https://gist.github.com/vicendominguez/8802592.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/8802592.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;:)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

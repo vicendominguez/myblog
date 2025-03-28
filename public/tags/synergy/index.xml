@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Synergy on VicenDominguez</title>
+    <link>//localhost:1313/tags/synergy/</link>
+    <description>Recent content in Synergy on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 20 May 2012 11:02:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/synergy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Problems with keyboard in Synergy solved in Mac OS X</title>
+      <link>//localhost:1313/posts/problems-with-keyboard-in-synergy-solved-in-mac-os-x/</link>
+      <pubDate>Sun, 20 May 2012 11:02:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/problems-with-keyboard-in-synergy-solved-in-mac-os-x/</guid>
+      <description>&lt;p&gt;Too Old&amp;hellip;. and Synergy, in Mavericks, needs to run only from terminal.&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/8802406.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;:|&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

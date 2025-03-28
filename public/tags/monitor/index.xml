@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitor on VicenDominguez</title>
+    <link>//localhost:1313/tags/monitor/</link>
+    <description>Recent content in Monitor on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 11 Nov 2014 14:50:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/monitor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>memcached-zabbix-template monitor</title>
+      <link>//localhost:1313/posts/memcached-zabbix-template-monitor/</link>
+      <pubDate>Tue, 11 Nov 2014 14:50:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/memcached-zabbix-template-monitor/</guid>
+      <description>&lt;p&gt;This is a minimal template to get info from your Memcached server from two possible places. Via zabbix-agentd in clients or via externalscripts in zabbix server. Choose your option.&lt;/p&gt;&#xA;&lt;p&gt;Monitoring information by now:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;lsquo;bytes&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;cmd_get&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;cmd_set&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;curr_items&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;curr_connections&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;rsquo;limit_maxbytes&#39;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;uptime&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;get_hits&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;get_misses&amp;rsquo;,&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;And the special HIT-ratio in %:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;lsquo;ratio&amp;rsquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;installation-in-the-zabbix-server&#34;&gt;Installation in the Zabbix Server&lt;/h2&gt;&#xA;&lt;p&gt;You should look for the external scripts directory in your Zabbix Server configuration file. In the CentOS 6.5 RPM Zabbix installation is: &lt;code&gt;/usr/lib/zabbix/externalscripts&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>collectd-web for CentOS 6.5</title>
+      <link>//localhost:1313/posts/collectd-web-for-centos-6.5/</link>
+      <pubDate>Thu, 04 Sep 2014 16:49:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/collectd-web-for-centos-6.5/</guid>
+      <description>&lt;p&gt;There are RPM packages for collectd in CentOS 6.x, you will need the EPEL repository.&lt;/p&gt;&#xA;&lt;p&gt;If you want an easy web interface to the graphs, there is a &lt;code&gt;collectd-web&lt;/code&gt; package available, but that package actually refers to the &lt;a href=&#34;https://collectd.org/wiki/index.php/Collection_3&#34;&gt;collection3 frontend&lt;/a&gt;. If you prefer the original &lt;a href=&#34;http://collectdweb.appspot.com/&#34;&gt;collectd-web&lt;/a&gt;, then you will need to install it from its &lt;a href=&#34;https://github.com/httpdss/collectd-web&#34;&gt;GitHub site&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The most important thing is to create the &lt;code&gt;/etc/collectd/collection.conf&lt;/code&gt; file. Be careful; if you want to change the path, you will need to modify the sources.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iperf as a daemon to test the bandwidth (in RHEL6)</title>
+      <link>//localhost:1313/posts/iperf-as-a-daemon-to-test-the-bandwidth-in-rhel6/</link>
+      <pubDate>Tue, 05 Aug 2014 13:17:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/iperf-as-a-daemon-to-test-the-bandwidth-in-rhel6/</guid>
+      <description>&lt;h2 id=&#34;update&#34;&gt;Update:&lt;/h2&gt;&#xA;&lt;p&gt;Check the &lt;a href=&#34;http://vicendominguez.blogspot.com.es/2014/08/iperf-as-daemon-to-check-bandwidth-in.html?showComment=1464820386392#c436203452802144662&#34;&gt;Jason&amp;rsquo;s comments&lt;/a&gt; to discover new updates for iperf v3.&lt;/p&gt;&#xA;&lt;p&gt;Do you need to check the connectivity between your server and your customers? Do you have different customers with different OS? Take a look to &lt;a href=&#34;http://iperf.fr/&#34;&gt;iperf&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;iperf-features&#34;&gt;iperf features&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;TCP&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Measure bandwidth&lt;/li&gt;&#xA;&lt;li&gt;Report MSS/MTU size and observed read sizes.&lt;/li&gt;&#xA;&lt;li&gt;Support for TCP window size via socket buffers.&lt;/li&gt;&#xA;&lt;li&gt;Multi-threaded if pthreads or Win32 threads are available. Client and server can have multiple simultaneous connections.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;UDP&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>wowza-zabbix-template monitor</title>
+      <link>//localhost:1313/posts/wowza-zabbix-template-monitor/</link>
+      <pubDate>Fri, 17 Jan 2014 10:35:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/wowza-zabbix-template-monitor/</guid>
+      <description>&lt;p&gt;This is a minimal template to get info about your wowza rest url in your Zabbix Platform.&lt;/p&gt;&#xA;&lt;p&gt;Two items, by now:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Global connections in the Wowza&lt;/li&gt;&#xA;&lt;li&gt;Global Live streams number&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The template uses Zabbix macros to define the user/pass Wowza server url. It permits a fast configuration because you can apply the same template to all your wowza hosts and change the user/pass usermacros per host only.&lt;/p&gt;&#xA;&lt;p&gt;REPO: &lt;a href=&#34;https://github.com/vicendominguez/wowza-zabbix-template&#34;&gt;https://github.com/vicendominguez/wowza-zabbix-template&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Screenshot:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://2.bp.blogspot.com/-6IeZxQqAsfo/UvidZoiXG0I/AAAAAAAAA5k/-9lAbEZ46F4/s1600/zabbix-wowza-graph.png&#34; alt=&#34;Zabbix Wowza Graph&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drop on VicenDominguez</title>
+    <link>//localhost:1313/tags/drop/</link>
+    <description>Recent content in Drop on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 10 Mar 2014 11:12:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/drop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mysql: Drop database with dash in name</title>
+      <link>//localhost:1313/posts/mysql-drop-database-with-dash-in-name/</link>
+      <pubDate>Mon, 10 Mar 2014 11:12:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/mysql-drop-database-with-dash-in-name/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql&amp;gt; drop database my-web;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ERROR &lt;span style=&#34;color:#ae81ff&#34;&gt;1064&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;42000&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; the right syntax to use near &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;-web&amp;#39;&lt;/span&gt; at line &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql&amp;gt; drop database &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;my-web&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ERROR &lt;span style=&#34;color:#ae81ff&#34;&gt;1064&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;42000&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; the right syntax to use near &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#34;my-web&amp;#34;&amp;#39;&lt;/span&gt; at line &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql&amp;gt; drop database &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;my-web&amp;#39;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ERROR &lt;span style=&#34;color:#ae81ff&#34;&gt;1064&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;42000&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; the right syntax to use near &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;my-web&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; at line &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The trick:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,10 @@
+.footer {
+  font-family: 'Courier New', monospace;
+  color: $light-color-secondary;
+  text-align: center;
+  padding: 1rem;
+  
+  &__content {
+    justify-content: center;
+  }
+}

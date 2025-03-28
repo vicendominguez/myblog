@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on VicenDominguez</title>
+    <link>//localhost:1313/tags/python/</link>
+    <description>Recent content in Python on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 27 Jun 2017 23:49:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixed Shodan API in the old TheHarvester </title>
+      <link>//localhost:1313/posts/fixed-shodan-api-in-the-old-theharvester/</link>
+      <pubDate>Tue, 27 Jun 2017 23:49:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fixed-shodan-api-in-the-old-theharvester/</guid>
+      <description>&lt;p&gt;If you are an old-school man, I am sure you have worked with the old &lt;a href=&#34;https://github.com/laramies/theHarvester&#34;&gt;theHarverster&lt;/a&gt; to make some OSINT (or whatever they call now to extract/search data from different webpages).&lt;/p&gt;&#xA;&lt;p&gt;Also, &lt;a href=&#34;https://tools.kali.org/information-gathering/theharvester&#34;&gt;theHarvester is available in Kali Linux&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Well, the problem comes from &lt;a href=&#34;https://www.shodan.io/&#34;&gt;Shodan&lt;/a&gt;. They updated their API and it breaks the theHarvester support of Shodan.&lt;/p&gt;&#xA;&lt;p&gt;I wrote &lt;a href=&#34;https://github.com/laramies/theHarvester/issues/57&#34;&gt;an issue&lt;/a&gt; and, finally, spent some minutes to fix it in this PR: &lt;a href=&#34;https://github.com/laramies/theHarvester/pull/58&#34;&gt;https://github.com/laramies/theHarvester/pull/58&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I don&amp;rsquo;t know if laramies has deprecated the project&amp;hellip; &lt;a href=&#34;https://github.com/vicendominguez/theHarvester&#34;&gt;my contribution&lt;/a&gt; is there&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ansible &#43; Linode API &#43; CentOS</title>
+      <link>//localhost:1313/posts/ansible--linode-api--centos/</link>
+      <pubDate>Mon, 11 May 2015 21:18:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ansible--linode-api--centos/</guid>
+      <description>&lt;p&gt;Fast Mode ON! If you don&amp;rsquo;t understand anything&amp;hellip;. try to ask it in the comments.&lt;/p&gt;&#xA;&lt;p&gt;Requirements for CentOS:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;yum install pip&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;pip install linode-python&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;pip install chube&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Template:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/805fb9f5426083a7ab05.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;These values are from the API:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;plan: 1     #cheapest&#xA;datacenter: 6    #newmark NJ&#xA;distribution: 127         #centos 6.5&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are different values and you will need to ask them to the API so, to see full info of these three from Linode API (distributions IDs, datacenters and plans), you can run this Node.js script:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>supervisord in CentOS 7 (systemd version)</title>
+      <link>//localhost:1313/posts/supervisord-in-centos-7-systemd-version/</link>
+      <pubDate>Wed, 18 Feb 2015 12:35:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/supervisord-in-centos-7-systemd-version/</guid>
+      <description>&lt;p&gt;Hello,&lt;/p&gt;&#xA;&lt;p&gt;Fast installation in CentOS 7 for this &amp;ldquo;helper&amp;rdquo; to the queues service in Laravel or Django framework. EPEL package too old so:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;yum install python-setuptools python-pip&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;pip install supervisor&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;mkdir -p /etc/supervisord&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;echo_supervisord_conf &amp;gt; /etc/supervisor.d/supervisord.conf&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Forked systemd init script (thx to &lt;a href=&#34;https://gist.github.com/tonyseek&#34;&gt;Jiangge Zhang&lt;/a&gt;) in &lt;code&gt;/usr/lib/systemd/system/supervisord.service&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;script src&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://gist.github.com/vicendominguez/0da525e8870198652f63.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;systemctl enable supervisord&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;systemctl start supervisord&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;User=nginx is useful to run this process as nginx user. You can change it but the user must be in the system.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FOSDEM 2015</title>
+      <link>//localhost:1313/posts/fosdem-2015/</link>
+      <pubDate>Wed, 04 Feb 2015 19:31:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fosdem-2015/</guid>
+      <description>&lt;p&gt;F.O.S.D.E.M 2.0.1.5&lt;/p&gt;&#xA;&lt;p&gt;very crazy!&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFCdZfNSXeHCwwE_006s41khYvP4g0LNRyWaNO0CFpJvK-0s0AZmiBLcfACbqsE_kvmyvHLvROzoVgBwgzByik4-DM4qOUAw4TLNChnxhtEtvwYJeATQCgzYrZfw7gtG1xHr3JqA-jy00/s1600/fosdem2.jpg&#34; alt=&#34;fosdem2&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhdeFvJFRbv555-fB6VdmR4HGvHH950LoxuEAiq4RBEBjYVndcERgr8Q1Rqfmk9P2jfM4LguN4mfj3EoRH4xkdEqhraUqdbYR4y5tejj9BD2pT65zfI12k1vFKEM8QsVNibNTPQFqwO7I/s1600/fosdem.jpg&#34; alt=&#34;fosdem&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;:-O&lt;/p&gt;&#xA;&lt;p&gt;Thanks to everybody.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>pyV8 RPM for CentOS 6</title>
+      <link>//localhost:1313/posts/pyv8-rpm-for-centos-6/</link>
+      <pubDate>Mon, 19 Jan 2015 09:39:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/pyv8-rpm-for-centos-6/</guid>
+      <description>&lt;p&gt;The text you provided is a log of a software package installation process. It appears to be for the &lt;code&gt;python-pyV8&lt;/code&gt; package, which is part of the &lt;code&gt;enetres.net&lt;/code&gt; repository. Here&amp;rsquo;s a breakdown of what happened:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Package Installation&lt;/strong&gt;: The system is installing several packages (&lt;code&gt;libboost_python1_55_0&lt;/code&gt;, &lt;code&gt;libboost_system1_55_0&lt;/code&gt;, &lt;code&gt;libboost_thread1_55_0&lt;/code&gt;, and &lt;code&gt;python-pyV8&lt;/code&gt;) from the &lt;code&gt;enetres.net&lt;/code&gt; repository.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Dependencies&lt;/strong&gt;: The &lt;code&gt;python-pyV8&lt;/code&gt; package depends on other Boost libraries (&lt;code&gt;libboost_python&lt;/code&gt;, &lt;code&gt;libboost_system&lt;/code&gt;, and &lt;code&gt;libboost_thread&lt;/code&gt;). These dependencies are automatically resolved and installed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ansible: Generating a SSH pub key file and uploading to other host to sync files from there</title>
+      <link>//localhost:1313/posts/ansible-generating-a-ssh-pub-key-file-and-uploading-to-other-host-to-sync-files-from-there/</link>
+      <pubDate>Fri, 05 Dec 2014 14:55:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ansible-generating-a-ssh-pub-key-file-and-uploading-to-other-host-to-sync-files-from-there/</guid>
+      <description>&lt;h1 id=&#34;update&#34;&gt;Update&lt;/h1&gt;&#xA;&lt;p&gt;Check the comments for new workflows.&lt;/p&gt;&#xA;&lt;p&gt;Original from 19/May/2014&amp;hellip; updated!&lt;/p&gt;&#xA;&lt;p&gt;I found this workflow for our systems:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Up the new box.&lt;/li&gt;&#xA;&lt;li&gt;Generate keys in that new box.&lt;/li&gt;&#xA;&lt;li&gt;&amp;ldquo;Fetch&amp;rdquo; the pub key from the new server to the ansible server.&lt;/li&gt;&#xA;&lt;li&gt;Copy that key to authorized_keys file of the other server (from ansible server).&lt;/li&gt;&#xA;&lt;li&gt;Execute a rsync from the new server without asking key to the other server.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;My trick is:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fast stats from glassfish server.log </title>
+      <link>//localhost:1313/posts/fast-stats-from-glassfish-server.log/</link>
+      <pubDate>Thu, 16 Oct 2014 13:57:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fast-stats-from-glassfish-server.log/</guid>
+      <description>&lt;p&gt;Very fast Python script to take a quick look at your GlassFish server.log file.&lt;/p&gt;&#xA;&lt;p&gt;Output:&lt;/p&gt;&#xA;&lt;p&gt;Fecha Inicio: [2014-10-13T23:54:54.372+0200]&#xA;Fecha Fin: [2014-10-16T13:46:22.230+0200]&#xA;Total INFO: 826&#xA;Total WARN: 126&#xA;Total SEVERE: 2341&#xA;Total ERROR: 96&#xA;Total Processing: 3389&#xA;Total Exceptions: 0&#xA;Total logfile lines: 13646&lt;/p&gt;&#xA;&lt;p&gt;The script:&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/5c54eb26cdf747662453.js&#34;&gt;&lt;/script&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Process monitor template with logger and email notifier (daemonized)</title>
+      <link>//localhost:1313/posts/process-monitor-template-with-logger-and-email-notifier-daemonized/</link>
+      <pubDate>Wed, 24 Sep 2014 14:08:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/process-monitor-template-with-logger-and-email-notifier-daemonized/</guid>
+      <description>&lt;p&gt;If you are looking for a template to write a fast copy-and-paste script (daemonized) for monitoring one process&amp;hellip; you can get some ideas from this:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/b2421fd06ad7e466584c.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Killing old Linksys WAG54* or WAG200* like &#34;Rambo&#34; (temporary)</title>
+      <link>//localhost:1313/posts/killing-old-linksys-wag54-or-wag200-like-rambo-temporary/</link>
+      <pubDate>Sat, 06 Sep 2014 10:36:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/killing-old-linksys-wag54-or-wag200-like-rambo-temporary/</guid>
+      <description>&lt;p&gt;It looks like you&amp;rsquo;re sharing a detailed account of a proof-of-concept (PoC) for exploiting an old Linksys WAG200G router. The PoC seems to cause the router to crash or become unresponsive, effectively performing a denial-of-service (DoS) attack on it.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a breakdown of the key points:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Target Identification&lt;/strong&gt;: The target is a Linksys WAG200G router with firmware version 1.01.04.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Exploit Process&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Connect to the target IP address.&lt;/li&gt;&#xA;&lt;li&gt;Send a series of malicious requests or data that causes the router&amp;rsquo;s memory to become unresponsive.&lt;/li&gt;&#xA;&lt;li&gt;This leads to a temporary DoS condition.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Impact&lt;/strong&gt;: The router stops responding for approximately 5-10 minutes, making it unusable during this period.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;python-poc-script&#34;&gt;Python PoC Script&lt;/h3&gt;&#xA;&lt;p&gt;The script you&amp;rsquo;ve shared appears to be a basic implementation of the exploit. It connects to the target IP address and sends a series of requests that might cause the memory overflow. Here&amp;rsquo;s a simplified version based on your description:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

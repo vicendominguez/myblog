@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lighttpd on VicenDominguez</title>
+    <link>//localhost:1313/tags/lighttpd/</link>
+    <description>Recent content in Lighttpd on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 21 Mar 2014 09:26:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/lighttpd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lighttpd: full site with SSL with exception of a url / path / directory</title>
+      <link>//localhost:1313/posts/lighttpd-full-site-with-ssl-with-exception-of-a-url--path--directory/</link>
+      <pubDate>Fri, 21 Mar 2014 09:26:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/lighttpd-full-site-with-ssl-with-exception-of-a-url--path--directory/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Well.. perhaps you need SSL in your site but you want to exclude a concrete path / url. This is my config:&#xA;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/9056884.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fedora on VicenDominguez</title>
+    <link>//localhost:1313/tags/fedora/</link>
+    <description>Recent content in Fedora on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 19 Jan 2015 09:39:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pyV8 RPM for CentOS 6</title>
+      <link>//localhost:1313/posts/pyv8-rpm-for-centos-6/</link>
+      <pubDate>Mon, 19 Jan 2015 09:39:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/pyv8-rpm-for-centos-6/</guid>
+      <description>&lt;p&gt;The text you provided is a log of a software package installation process. It appears to be for the &lt;code&gt;python-pyV8&lt;/code&gt; package, which is part of the &lt;code&gt;enetres.net&lt;/code&gt; repository. Here&amp;rsquo;s a breakdown of what happened:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Package Installation&lt;/strong&gt;: The system is installing several packages (&lt;code&gt;libboost_python1_55_0&lt;/code&gt;, &lt;code&gt;libboost_system1_55_0&lt;/code&gt;, &lt;code&gt;libboost_thread1_55_0&lt;/code&gt;, and &lt;code&gt;python-pyV8&lt;/code&gt;) from the &lt;code&gt;enetres.net&lt;/code&gt; repository.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Dependencies&lt;/strong&gt;: The &lt;code&gt;python-pyV8&lt;/code&gt; package depends on other Boost libraries (&lt;code&gt;libboost_python&lt;/code&gt;, &lt;code&gt;libboost_system&lt;/code&gt;, and &lt;code&gt;libboost_thread&lt;/code&gt;). These dependencies are automatically resolved and installed.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

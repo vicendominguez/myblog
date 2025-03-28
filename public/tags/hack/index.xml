@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hack on VicenDominguez</title>
+    <link>//localhost:1313/tags/hack/</link>
+    <description>Recent content in Hack on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 27 Jun 2017 23:49:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/hack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixed Shodan API in the old TheHarvester </title>
+      <link>//localhost:1313/posts/fixed-shodan-api-in-the-old-theharvester/</link>
+      <pubDate>Tue, 27 Jun 2017 23:49:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fixed-shodan-api-in-the-old-theharvester/</guid>
+      <description>&lt;p&gt;If you are an old-school man, I am sure you have worked with the old &lt;a href=&#34;https://github.com/laramies/theHarvester&#34;&gt;theHarverster&lt;/a&gt; to make some OSINT (or whatever they call now to extract/search data from different webpages).&lt;/p&gt;&#xA;&lt;p&gt;Also, &lt;a href=&#34;https://tools.kali.org/information-gathering/theharvester&#34;&gt;theHarvester is available in Kali Linux&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Well, the problem comes from &lt;a href=&#34;https://www.shodan.io/&#34;&gt;Shodan&lt;/a&gt;. They updated their API and it breaks the theHarvester support of Shodan.&lt;/p&gt;&#xA;&lt;p&gt;I wrote &lt;a href=&#34;https://github.com/laramies/theHarvester/issues/57&#34;&gt;an issue&lt;/a&gt; and, finally, spent some minutes to fix it in this PR: &lt;a href=&#34;https://github.com/laramies/theHarvester/pull/58&#34;&gt;https://github.com/laramies/theHarvester/pull/58&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I don&amp;rsquo;t know if laramies has deprecated the project&amp;hellip; &lt;a href=&#34;https://github.com/vicendominguez/theHarvester&#34;&gt;my contribution&lt;/a&gt; is there&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

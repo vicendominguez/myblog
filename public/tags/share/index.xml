@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Share on VicenDominguez</title>
+    <link>//localhost:1313/tags/share/</link>
+    <description>Recent content in Share on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 16 Jan 2013 10:32:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/share/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#34;Automagic&#34; mount (at boot time) of a windows folder in FreeBSD 7</title>
+      <link>//localhost:1313/posts/automagic-mount-at-boot-time-of-a-windows-folder-in-freebsd-7/</link>
+      <pubDate>Wed, 16 Jan 2013 10:32:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/automagic-mount-at-boot-time-of-a-windows-folder-in-freebsd-7/</guid>
+      <description>&lt;p&gt;Mounting share folder at boot time looks like easy yeah&amp;hellip;. but you need to know what the trick is.&lt;/p&gt;&#xA;&lt;p&gt;From my gist: &lt;script src=&#34;https://gist.github.com/vicendominguez/8806533.js&#34;&gt;&lt;/script&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

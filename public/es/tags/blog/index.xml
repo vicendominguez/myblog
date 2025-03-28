@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on VicenDominguez</title>
+    <link>//localhost:1313/es/tags/blog/</link>
+    <description>Recent content in Blog on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 28 Mar 2025 17:30:22 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/es/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre revivir el blog</title>
+      <link>//localhost:1313/es/posts/tech/</link>
+      <pubDate>Fri, 28 Mar 2025 17:30:22 +0100</pubDate>
+      <guid>//localhost:1313/es/posts/tech/</guid>
+      <description>&lt;img src=&#34;//localhost:1313/images/hugo-logo-wide.svg&#34;  alt=&#34;Hecho con Hugo&#34;  class=&#34;left&#34;  style=&#34;width: 40%;&#34;  /&gt;&#xA;&#xA;&#xA;&lt;p&gt;No es mas que un combo de HUGO con un estilo personal y:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;el tema &lt;a href=&#34;https://themes.gohugo.io/themes/hugo-theme-hello-friend-ng/&#34;&gt;hello-friend-ng&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;li&gt;algun recurso del &lt;a href=&#34;https://www.pranamshetty.dev/&#34;&gt;blog personal de Pranan Shetty&lt;/a&gt; -pero no conozco si el recurso es suyo.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;nota-las-cositas-tecnicas-en-ingles&#34;&gt;Nota: Las cositas tecnicas en ingles.&lt;/h5&gt;</description>
+    </item>
+  </channel>
+</rss>

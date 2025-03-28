@@ -1,0 +1,16 @@
+button, .button, a.button {
+  font-family: 'Courier New', monospace;
+  background: transparent;
+  border: 1px solid $light-border-color;
+  color: $light-color;
+  
+  &:hover {
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  
+  &.primary {
+    background: rgba(0, 255, 255, 0.2);
+    color: #00FFFF;
+  }
+}

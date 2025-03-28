@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on VicenDominguez</title>
+    <link>//localhost:1313/tags/monitoring/</link>
+    <description>Recent content in Monitoring on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 12 Jan 2016 13:14:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autoregistration of Raspberries/Servers with the same hostname on Zabbix</title>
+      <link>//localhost:1313/posts/autoregistration-of-raspberriesservers-with-the-same-hostname-on-zabbix/</link>
+      <pubDate>Tue, 12 Jan 2016 13:14:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/autoregistration-of-raspberriesservers-with-the-same-hostname-on-zabbix/</guid>
+      <description>&lt;h2 id=&#34;possible-project&#34;&gt;Possible project&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;At least, 200x Raspberries in different locations&lt;/li&gt;&#xA;&lt;li&gt;We can have two or three Raspberries in the same location.&lt;/li&gt;&#xA;&lt;li&gt;Firewall in all locations&lt;/li&gt;&#xA;&lt;li&gt;No starting date known&lt;/li&gt;&#xA;&lt;li&gt;Installation from the same image so the hostname is the same in all of them.&lt;/li&gt;&#xA;&lt;li&gt;Nobody can log in&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;question&#34;&gt;Question&lt;/h2&gt;&#xA;&lt;p&gt;How to monitor those Raspberries with Zabbix?&lt;/p&gt;&#xA;&lt;h2 id=&#34;key&#34;&gt;Key&lt;/h2&gt;&#xA;&lt;p&gt;Zabbix (2.2) uses the hostname as key field. It&amp;rsquo;s not possible to repeat that hostname on the server, so how to proceed?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>memcached-zabbix-template monitor</title>
+      <link>//localhost:1313/posts/memcached-zabbix-template-monitor/</link>
+      <pubDate>Tue, 11 Nov 2014 14:50:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/memcached-zabbix-template-monitor/</guid>
+      <description>&lt;p&gt;This is a minimal template to get info from your Memcached server from two possible places. Via zabbix-agentd in clients or via externalscripts in zabbix server. Choose your option.&lt;/p&gt;&#xA;&lt;p&gt;Monitoring information by now:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;lsquo;bytes&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;cmd_get&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;cmd_set&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;curr_items&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;curr_connections&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;rsquo;limit_maxbytes&#39;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;uptime&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;get_hits&amp;rsquo;,&lt;/li&gt;&#xA;&lt;li&gt;&amp;lsquo;get_misses&amp;rsquo;,&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;And the special HIT-ratio in %:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;lsquo;ratio&amp;rsquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;installation-in-the-zabbix-server&#34;&gt;Installation in the Zabbix Server&lt;/h2&gt;&#xA;&lt;p&gt;You should look for the external scripts directory in your Zabbix Server configuration file. In the CentOS 6.5 RPM Zabbix installation is: &lt;code&gt;/usr/lib/zabbix/externalscripts&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>collectd-web for CentOS 6.5</title>
+      <link>//localhost:1313/posts/collectd-web-for-centos-6.5/</link>
+      <pubDate>Thu, 04 Sep 2014 16:49:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/collectd-web-for-centos-6.5/</guid>
+      <description>&lt;p&gt;There are RPM packages for collectd in CentOS 6.x, you will need the EPEL repository.&lt;/p&gt;&#xA;&lt;p&gt;If you want an easy web interface to the graphs, there is a &lt;code&gt;collectd-web&lt;/code&gt; package available, but that package actually refers to the &lt;a href=&#34;https://collectd.org/wiki/index.php/Collection_3&#34;&gt;collection3 frontend&lt;/a&gt;. If you prefer the original &lt;a href=&#34;http://collectdweb.appspot.com/&#34;&gt;collectd-web&lt;/a&gt;, then you will need to install it from its &lt;a href=&#34;https://github.com/httpdss/collectd-web&#34;&gt;GitHub site&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The most important thing is to create the &lt;code&gt;/etc/collectd/collection.conf&lt;/code&gt; file. Be careful; if you want to change the path, you will need to modify the sources.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>sockstat-zabbix-template monitor</title>
+      <link>//localhost:1313/posts/sockstat-zabbix-template-monitor/</link>
+      <pubDate>Wed, 29 Jan 2014 10:30:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/sockstat-zabbix-template-monitor/</guid>
+      <description>&lt;p&gt;Zabbix 2.2 comes with support of loadable modules for extending Zabbix agent and server without sacrificing performance.&lt;/p&gt;&#xA;&lt;p&gt;A loadable module is basically a shared library used by Zabbix server or agent and loaded on startup. The library should contain certain functions, so that a Zabbix process may detect that the file is indeed a module it can load and work with.&lt;/p&gt;&#xA;&lt;p&gt;Loadable modules have a number of benefits. Great performance and ability to implement any logic are very important, but perhaps the most important advantage is the ability to develop, use, and share Zabbix modules. It contributes to trouble-free maintenance and helps to deliver new functionality easier and independently of the Zabbix core code base.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

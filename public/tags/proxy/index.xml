@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on VicenDominguez</title>
+    <link>//localhost:1313/tags/proxy/</link>
+    <description>Recent content in Proxy on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 26 Jun 2015 13:08:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>varnish-vmod-geoip RPM package for Varnish &gt; 4.0.1 CentOS 6</title>
+      <link>//localhost:1313/posts/varnish-vmod-geoip-rpm-package-for-varnish--4.0.1-centos-6/</link>
+      <pubDate>Fri, 26 Jun 2015 13:08:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/varnish-vmod-geoip-rpm-package-for-varnish--4.0.1-centos-6/</guid>
+      <description>&lt;p&gt;This Varnish module exports functions to look up GeoIP country codes and requires GeoIP library.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/varnish/libvmod-geoip&#34;&gt;Module config and info here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/varnish-vmod-geoip.html&#34;&gt;RPM in our repo as always&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;:)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Updated!&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using nc and ncat with tor without torify/torsocks</title>
+      <link>//localhost:1313/posts/using-nc-and-ncat-with-tor-without-torifytorsocks/</link>
+      <pubDate>Wed, 27 Aug 2014 13:47:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/using-nc-and-ncat-with-tor-without-torifytorsocks/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;re running into issues with using torify/torsocks in a script that involves nc and ncat, there are some handy parameters to make it work easily.&lt;/p&gt;&#xA;&lt;p&gt;For example, when you have a Tor SOCKS proxy set up on localhost and you&amp;rsquo;re using netcat (nc), the command would look something like this:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nc -v -X5 -x localhost:9050 &amp;lt;server&amp;gt; &amp;lt;port&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And for ncat, it would be:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ncat -v --proxy localhost:9050 --proxy-type socks5 &amp;lt;server&amp;gt; &amp;lt;port&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Of course, you can use any proxy. This is super useful for scripting!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Searching full anonymous proxies </title>
+      <link>//localhost:1313/posts/searching-full-anonymous-proxies/</link>
+      <pubDate>Tue, 14 May 2013 09:48:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/searching-full-anonymous-proxies/</guid>
+      <description>&lt;p&gt;I have created a PoC to try to get full anonymous proxies. This script discovers if your IP is fully changed and anonymous using a proxy. It works via NSE by NMAP.&lt;/p&gt;&#xA;&lt;p&gt;I wrote one post about it in Spanish here: &lt;a href=&#34;http://www.securityartwork.es/2013/05/14/a-vueltas-con-la-deteccion-de-proxys/&#34;&gt;Security Artwork&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The PoC source code is available here: &lt;a href=&#34;https://github.com/vicendominguez/http-open-proxy-anon&#34;&gt;GitHub repository&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;:)&lt;/p&gt;&#xA;&lt;p&gt;Vte&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

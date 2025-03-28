@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Routers on VicenDominguez</title>
+    <link>//localhost:1313/tags/routers/</link>
+    <description>Recent content in Routers on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 06 Sep 2014 10:36:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/routers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Killing old Linksys WAG54* or WAG200* like &#34;Rambo&#34; (temporary)</title>
+      <link>//localhost:1313/posts/killing-old-linksys-wag54-or-wag200-like-rambo-temporary/</link>
+      <pubDate>Sat, 06 Sep 2014 10:36:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/killing-old-linksys-wag54-or-wag200-like-rambo-temporary/</guid>
+      <description>&lt;p&gt;It looks like you&amp;rsquo;re sharing a detailed account of a proof-of-concept (PoC) for exploiting an old Linksys WAG200G router. The PoC seems to cause the router to crash or become unresponsive, effectively performing a denial-of-service (DoS) attack on it.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a breakdown of the key points:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Target Identification&lt;/strong&gt;: The target is a Linksys WAG200G router with firmware version 1.01.04.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Exploit Process&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Connect to the target IP address.&lt;/li&gt;&#xA;&lt;li&gt;Send a series of malicious requests or data that causes the router&amp;rsquo;s memory to become unresponsive.&lt;/li&gt;&#xA;&lt;li&gt;This leads to a temporary DoS condition.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Impact&lt;/strong&gt;: The router stops responding for approximately 5-10 minutes, making it unusable during this period.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;python-poc-script&#34;&gt;Python PoC Script&lt;/h3&gt;&#xA;&lt;p&gt;The script you&amp;rsquo;ve shared appears to be a basic implementation of the exploit. It connects to the target IP address and sends a series of requests that might cause the memory overflow. Here&amp;rsquo;s a simplified version based on your description:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

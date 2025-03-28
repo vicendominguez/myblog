@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fabric on VicenDominguez</title>
+    <link>//localhost:1313/tags/fabric/</link>
+    <description>Recent content in Fabric on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 11 May 2015 21:18:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/fabric/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible &#43; Linode API &#43; CentOS</title>
+      <link>//localhost:1313/posts/ansible--linode-api--centos/</link>
+      <pubDate>Mon, 11 May 2015 21:18:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ansible--linode-api--centos/</guid>
+      <description>&lt;p&gt;Fast Mode ON! If you don&amp;rsquo;t understand anything&amp;hellip;. try to ask it in the comments.&lt;/p&gt;&#xA;&lt;p&gt;Requirements for CentOS:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;yum install pip&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;pip install linode-python&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;pip install chube&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Template:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/805fb9f5426083a7ab05.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;These values are from the API:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;plan: 1     #cheapest&#xA;datacenter: 6    #newmark NJ&#xA;distribution: 127         #centos 6.5&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are different values and you will need to ask them to the API so, to see full info of these three from Linode API (distributions IDs, datacenters and plans), you can run this Node.js script:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

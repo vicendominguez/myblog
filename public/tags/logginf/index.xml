@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logginf on VicenDominguez</title>
+    <link>//localhost:1313/tags/logginf/</link>
+    <description>Recent content in Logginf on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 05 Mar 2014 15:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/logginf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Glassfish 4 tricks on CentOS 6</title>
+      <link>//localhost:1313/posts/glassfish-4-tricks-on-centos-6/</link>
+      <pubDate>Wed, 05 Mar 2014 15:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/glassfish-4-tricks-on-centos-6/</guid>
+      <description>&lt;p&gt;Three tricks here.&lt;/p&gt;&#xA;&lt;p&gt;One. Init.d script for CentOS 6:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/9089718.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;Two. Changing umask permission in Glassfish 4:&lt;/p&gt;&#xA;&lt;p&gt;Add &amp;ldquo;umask 002&amp;rdquo; just before the &amp;ldquo;exec&amp;rdquo; line in $GLASSFISH_HOME/bin/asadmin&lt;/p&gt;&#xA;&lt;p&gt;Three. Changing general logging file in Glassfish 4:&lt;/p&gt;&#xA;&lt;p&gt;Change logging.properties file line to (by example):&lt;/p&gt;&#xA;&lt;p&gt;com.sun.enterprise.server.logging.GFFileHandler.file=/var/log/glassfish/server.log&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daemon on VicenDominguez</title>
+    <link>//localhost:1313/tags/daemon/</link>
+    <description>Recent content in Daemon on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 24 Sep 2014 14:08:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Process monitor template with logger and email notifier (daemonized)</title>
+      <link>//localhost:1313/posts/process-monitor-template-with-logger-and-email-notifier-daemonized/</link>
+      <pubDate>Wed, 24 Sep 2014 14:08:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/process-monitor-template-with-logger-and-email-notifier-daemonized/</guid>
+      <description>&lt;p&gt;If you are looking for a template to write a fast copy-and-paste script (daemonized) for monitoring one process&amp;hellip; you can get some ideas from this:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/b2421fd06ad7e466584c.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fosdem on VicenDominguez</title>
+    <link>//localhost:1313/tags/fosdem/</link>
+    <description>Recent content in Fosdem on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 04 Feb 2015 19:31:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/fosdem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FOSDEM 2015</title>
+      <link>//localhost:1313/posts/fosdem-2015/</link>
+      <pubDate>Wed, 04 Feb 2015 19:31:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fosdem-2015/</guid>
+      <description>&lt;p&gt;F.O.S.D.E.M 2.0.1.5&lt;/p&gt;&#xA;&lt;p&gt;very crazy!&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFCdZfNSXeHCwwE_006s41khYvP4g0LNRyWaNO0CFpJvK-0s0AZmiBLcfACbqsE_kvmyvHLvROzoVgBwgzByik4-DM4qOUAw4TLNChnxhtEtvwYJeATQCgzYrZfw7gtG1xHr3JqA-jy00/s1600/fosdem2.jpg&#34; alt=&#34;fosdem2&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhdeFvJFRbv555-fB6VdmR4HGvHH950LoxuEAiq4RBEBjYVndcERgr8Q1Rqfmk9P2jfM4LguN4mfj3EoRH4xkdEqhraUqdbYR4y5tejj9BD2pT65zfI12k1vFKEM8QsVNibNTPQFqwO7I/s1600/fosdem.jpg&#34; alt=&#34;fosdem&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;:-O&lt;/p&gt;&#xA;&lt;p&gt;Thanks to everybody.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on VicenDominguez</title>
+    <link>//localhost:1313/tags/javascript/</link>
+    <description>Recent content in Javascript on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 20 Jul 2017 00:03:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to trigger a pipeline from other pipeline in Buildkite using JSON format.</title>
+      <link>//localhost:1313/posts/how-to-trigger-a-pipeline-from-other-pipeline-in-buildkite-using-json-format./</link>
+      <pubDate>Thu, 20 Jul 2017 00:03:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/how-to-trigger-a-pipeline-from-other-pipeline-in-buildkite-using-json-format./</guid>
+      <description>&lt;p&gt;if you are using &lt;a href=&#34;https://buildkite.com/&#34;&gt;Buildkite&lt;/a&gt;, you will find how to &amp;ldquo;trigger&amp;rdquo; a pipeline from other pipeline in&lt;a href=&#34;https://buildkite.com/docs/pipelines/trigger-step&#34;&gt;this link&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;All of the examples are in yml format and, I don&amp;rsquo;t know why, it is impossible to find examples in JSON format.&lt;/p&gt;&#xA;&lt;p&gt;After speaking to the Buildkite support, it is possible to &amp;ldquo;trigger&amp;rdquo; pipelines from JSON but it is hard to find the steps to follow. In their support email they wrote a good information to follow:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fast access to the history host table of Netcraft site from terminal</title>
+      <link>//localhost:1313/posts/fast-access-to-the-history-host-table-of-netcraft-site-from-terminal/</link>
+      <pubDate>Tue, 27 Jan 2015 07:26:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/fast-access-to-the-history-host-table-of-netcraft-site-from-terminal/</guid>
+      <description>&lt;p&gt;Fast and ugly but it works. Useful for detecting old IPs and system OS. Netcraft history host table from terminal:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzSell3-YyYE3HskXs-kL2MSwqoelIIFnaohEXHI6OVeQK7tyFjjcaEM1lLKxSkV2KU23OSeHLkdedcxhuTrYjwOGwKhnzvhCGCkB3N9dA1qHnpj3iZxHNqWR1S9VeMYCDk9peJbcr97o/s1600/netcraftscraper.png&#34; alt=&#34;Netcraft Scraper&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Netcraft uses javascript so I chose casperjs for the scraper:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/2f9203ff473fc1702281.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>pyV8 RPM for CentOS 6</title>
+      <link>//localhost:1313/posts/pyv8-rpm-for-centos-6/</link>
+      <pubDate>Mon, 19 Jan 2015 09:39:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/pyv8-rpm-for-centos-6/</guid>
+      <description>&lt;p&gt;The text you provided is a log of a software package installation process. It appears to be for the &lt;code&gt;python-pyV8&lt;/code&gt; package, which is part of the &lt;code&gt;enetres.net&lt;/code&gt; repository. Here&amp;rsquo;s a breakdown of what happened:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Package Installation&lt;/strong&gt;: The system is installing several packages (&lt;code&gt;libboost_python1_55_0&lt;/code&gt;, &lt;code&gt;libboost_system1_55_0&lt;/code&gt;, &lt;code&gt;libboost_thread1_55_0&lt;/code&gt;, and &lt;code&gt;python-pyV8&lt;/code&gt;) from the &lt;code&gt;enetres.net&lt;/code&gt; repository.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Dependencies&lt;/strong&gt;: The &lt;code&gt;python-pyV8&lt;/code&gt; package depends on other Boost libraries (&lt;code&gt;libboost_python&lt;/code&gt;, &lt;code&gt;libboost_system&lt;/code&gt;, and &lt;code&gt;libboost_thread&lt;/code&gt;). These dependencies are automatically resolved and installed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nodejs: your global modules dont work after installing</title>
+      <link>//localhost:1313/posts/nodejs-your-global-modules-dont-work-after-installing/</link>
+      <pubDate>Thu, 31 Jul 2014 17:06:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/nodejs-your-global-modules-dont-work-after-installing/</guid>
+      <description>&lt;p&gt;Another linux distribution enigma.&lt;/p&gt;&#xA;&lt;p&gt;In the name of Tutatis, why f**** the node_modules directories are different in npm and &amp;ldquo;distro&amp;rdquo; packages???? The error message is similar to:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Error: Cannot find module &amp;#39;any_npm_module&amp;#39;&#xA; at Function.Module._resolveFilename (module.js:338:15)&#xA; at Function.Module._load (module.js:280:25)&#xA; at Module.require (module.js:364:17)&#xA; at require (module.js:380:17)&#xA; at repl:1:7&#xA; at REPLServer.self.eval (repl.js:110:21)&#xA; at repl.js:249:20&#xA; at REPLServer.self.eval (repl.js:122:7)&#xA; at Interface.&amp;lt;anonymous&amp;gt; (repl.js:239:12)&#xA; at Interface.emit (events.js:95:17)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Surprise!!!!&lt;/p&gt;&#xA;&lt;p&gt;CentOS, Fedora, Ubuntu, Debian and MacOSX-ports are using diferent path for the nodejs global modules. If you install the binary of &amp;ldquo;node&amp;rdquo; and &amp;ldquo;npm&amp;rdquo;, and later, you choose to use npm to install some modules, your modules will be dissapeared.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nodejs - npm - Error: SELF_SIGNED_CERT_IN_CHAIN</title>
+      <link>//localhost:1313/posts/nodejs---npm---error-self_signed_cert_in_chain/</link>
+      <pubDate>Wed, 23 Jul 2014 21:25:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/nodejs---npm---error-self_signed_cert_in_chain/</guid>
+      <description>&lt;p&gt;New error in the npm port package in Mavericks (OSX 10.9.4):&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;npm ERR! Error: SELF_SIGNED_CERT_IN_CHAIN&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Workaround:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;npm config set ca &amp;quot;&amp;quot;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;And re-install the module.&lt;/p&gt;&#xA;&lt;p&gt;;)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

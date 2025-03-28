@@ -1,0 +1,88 @@
+.menu {
+    text-align: center; // Center alignment for the whole menu
+    
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem; // Increased gap between items
+        list-style: none;
+        padding: 1rem 0; // Added vertical padding
+        margin: 0 auto; // Center the menu container
+        align-items: center;
+        justify-content: center; // Center items horizontally
+        max-width: 90vw; // Prevent too wide spacing on large screens
+        
+        @media #{$media-size-phone} {
+            gap: 1.5rem;
+            flex-direction: column;
+            align-items: center; // Keep centered on mobile
+        }
+    }
+
+    &__item {
+        font-family: 'Courier New', monospace;
+        color: $light-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.15em; // Slightly more spacing
+        font-size: 1.1rem; // Larger font size (was 0.9rem)
+        position: relative;
+        padding: 0.75rem 0; // Increased padding for better click area
+        transition: all 0.3s ease;
+        
+        &:hover {
+            color: #00FFFF;
+            text-shadow: 0 0 8px #00FFFF; // More pronounced glow
+            
+            &::after {
+                content: '_';
+                animation: blink 1s step-end infinite;
+                position: absolute;
+                bottom: 0.85rem;
+            }
+        }
+    }
+}
+
+.submenu {
+    display: inline-block;
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        
+        &:hover .dropdown-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+    
+    .dropbtn {
+        cursor: pointer;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: darken($light-background-header, 5%);
+        min-width: 80px; // Wider dropdown
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); // Stronger glow
+        z-index: 1;
+        right: 50%;
+        transform: translateX(50%); // Center the dropdown
+        padding: 1rem;
+        border: 1px solid #00FFFF;
+        border-radius: 0;
+        
+        .menu__item {
+            font-size: 1rem; // Slightly smaller in dropdown
+            white-space: nowrap; // Prevent line breaks
+        }
+    }
+}
+
+@keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}

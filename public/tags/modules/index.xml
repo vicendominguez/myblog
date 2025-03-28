@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modules on VicenDominguez</title>
+    <link>//localhost:1313/tags/modules/</link>
+    <description>Recent content in Modules on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 23 Jul 2014 21:25:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/modules/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nodejs - npm - Error: SELF_SIGNED_CERT_IN_CHAIN</title>
+      <link>//localhost:1313/posts/nodejs---npm---error-self_signed_cert_in_chain/</link>
+      <pubDate>Wed, 23 Jul 2014 21:25:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/nodejs---npm---error-self_signed_cert_in_chain/</guid>
+      <description>&lt;p&gt;New error in the npm port package in Mavericks (OSX 10.9.4):&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;npm ERR! Error: SELF_SIGNED_CERT_IN_CHAIN&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Workaround:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;npm config set ca &amp;quot;&amp;quot;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;And re-install the module.&lt;/p&gt;&#xA;&lt;p&gt;;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New RPMs of perl modules for CentOS 6 </title>
+      <link>//localhost:1313/posts/new-rpms-of-perl-modules-for-centos-6/</link>
+      <pubDate>Wed, 26 Mar 2014 08:47:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/new-rpms-of-perl-modules-for-centos-6/</guid>
+      <description>&lt;p&gt;New RPMs of perl modules for CentOS 6 in our &lt;a href=&#34;http://repo.enetres.net/repoview/index.html&#34;&gt;repo&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/perl-Text-Xslate.html&#34;&gt;perl-Text-Xslate-3.1.2-8.el6&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/perl-Test-Simple.html&#34;&gt;perl-Test-Simple-0.96-1.el6&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/perl-Data-MessagePack.html&#34;&gt;perl-Data-MessagePack-0.48-8.el6&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/perl-XML-TreePP-XMLPath.html&#34;&gt;perl-XML-TreePP-XMLPath-0.72-8.el6&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/perl-autobox-Core.html&#34;&gt;perl-autobox-Core-1.27-8.el6&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/perl-autobox.html&#34;&gt;perl-autobox-2.82-8.el6&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Also, you will need EPEL repo for the dependencies, friend.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

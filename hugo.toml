@@ -1,0 +1,118 @@
+baseurl      = "localhost"
+title        = "VicenDominguez"
+languageCode = "en-us"
+
+theme = 'hugo-theme-hello-friend-ng'
+
+[pagination]
+  pagerSize = "25"
+
+[permalinks]
+about = "/about/"
+
+[params]
+#  dateform        = "Jan 2, 2006"
+#  dateformShort   = "Jan 2"
+#  dateformNum     = "2006-01-02"
+#  dateformNumTime = "2006-01-02 15:04"
+  dateformYearShort = "Jan, 2006"
+
+  # Subtitle for home
+  homeSubtitle = "From BSD to SRE: A +30-Year Journey of Open Source Problem-Solving"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = true
+
+  # Metadata mostly used in document's head
+  description = "VicenDominguez blog"
+  keywords = "homepage, personal, blog, tech, hack, cybersecurity, sysadmin, sre, linux, freebsd"
+  images = [""]
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[[params.social]]
+   name = "github"
+   url = "https://github.com/vicendominguez"
+   weight = 10
+
+[[params.social]]
+   name = "twitter"
+   url = "https://x.com/vicendominguez"
+   weight = 20
+
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+
+[languages]
+  [languages.en]
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+  [[languages.en.menu.main]]
+    identifier = "0-tech"
+    name       = "Tech"
+    url        = "/posts"
+
+  [[languages.en.menu.main]]
+    identifier = "about"
+    name       = "about"
+    url        = "/about"
+
+  [[languages.en.menu.main]]
+    identifier = "2-metaphysics"
+    name       = "Metaphysics"
+    url        = "/metaphysics"
+
+  [languages.en.params]
+    subtitle  = "BSD Roots, Open Source Soul, SRE Resilience."
+
+    [languages.en.params.logo]
+      logoText = "knock!knock! Neo"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [languages.es]
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Seguir leyendo..."
+
+  [[languages.es.menu.main]]
+    identifier = "0-tech"
+    name       = "Tech/"
+    url        = "/posts"
+  [[languages.es.menu.main]]
+    identifier = "2-metafisica"
+    name       = "Metafisica/"
+    url        = "/metaphysics"
+  
+  [[languages.es.menu.main]]
+    identifier = "about"
+    name       = "SobreMI/"
+    url        = "/about"
+
+  [languages.es.params]
+    subtitle  = "Sysadmin de la vieja escuela, SRE de la nueva era."
+
+    [languages.es.params.logo]
+      logoText = "knock!knock! Neo"
+      logoHomeLink = "/"
+
+
+

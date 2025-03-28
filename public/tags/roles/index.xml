@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Roles on VicenDominguez</title>
+    <link>//localhost:1313/tags/roles/</link>
+    <description>Recent content in Roles on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 29 May 2014 12:28:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/roles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>It is not possible to search by OS in ansible-galaxy (yet?)</title>
+      <link>//localhost:1313/posts/it-is-not-possible-to-search-by-os-in-ansible-galaxy-yet/</link>
+      <pubDate>Thu, 29 May 2014 12:28:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/it-is-not-possible-to-search-by-os-in-ansible-galaxy-yet/</guid>
+      <description>&lt;p&gt;My twits to the Ansible creator:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;If you look at any role page, you will see the OS support list.&#xA;— Michael DeHaan (@laserllama), May 26, 2014&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;No, there isn&amp;rsquo;t yet. Search for the role purpose first and then open the highest rated ones. Also easy to modify.&#xA;— Michael DeHaan (@laserllama), May 26, 2014&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;So&amp;hellip; if you find an interesting role, you may not use it. You need to verify each role individually to ensure it is correct for your OS. There&amp;rsquo;s no other way.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

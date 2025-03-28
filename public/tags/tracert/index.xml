@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tracert on VicenDominguez</title>
+    <link>//localhost:1313/tags/tracert/</link>
+    <description>Recent content in Tracert on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 04 Jun 2014 14:51:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/tracert/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MTR 0.85 with AS lookup for CentOS/RHEL</title>
+      <link>//localhost:1313/posts/mtr-0.85-with-as-lookup-for-centosrhel/</link>
+      <pubDate>Wed, 04 Jun 2014 14:51:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/mtr-0.85-with-as-lookup-for-centosrhel/</guid>
+      <description>&lt;p&gt;From &lt;a href=&#34;http://www.bitwizard.nl/mtr/&#34;&gt;bitwizard.nl/mtr&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;mtr combines the functionality of the &amp;rsquo;traceroute&amp;rsquo; and &amp;lsquo;ping&amp;rsquo; programs in a single network diagnostic tool.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;And MTR 0.85 has a new feature very interesting. Its git repo says:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Add -z / &amp;ndash;show-ip support&lt;br&gt;&#xA;This new option displays both the hostname and the IP address of a host in the path. This is particularly important when the hostname determined by a reverse lookup has no corresponding forward record. This is similar to the -b (both) option in tracepath, but -b was already taken in mtr for &amp;ndash;bitpattern. Using this option also implies -w / &amp;ndash;report-wide as this option isn&amp;rsquo;t terribly useful without it in report mode. In general we endeavor to only show the IP address once per line, but in the split view we consistently add a separate field for IP address to the output. Signed-off-by: Travis Cross &lt;a href=&#34;mailto:tc@traviscross.com&#34;&gt;tc@traviscross.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

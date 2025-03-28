@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Configuration on VicenDominguez</title>
+    <link>//localhost:1313/tags/configuration/</link>
+    <description>Recent content in Configuration on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 11 Apr 2016 14:02:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#34;include:&#34; statement in Ansible  does not find the correct path running on Vagrant</title>
+      <link>//localhost:1313/posts/include-statement-in-ansible--does-not-find-the-correct-path-running-on-vagrant/</link>
+      <pubDate>Mon, 11 Apr 2016 14:02:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/include-statement-in-ansible--does-not-find-the-correct-path-running-on-vagrant/</guid>
+      <description>&lt;p&gt;What is the issue?&lt;/p&gt;&#xA;&lt;p&gt;You have an include statement inside a role but when the playbook is running on Vagrant, that path doesn&amp;rsquo;t exist!!&lt;/p&gt;&#xA;&lt;p&gt;Tree:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;├── playbook.yml&#xA;└── roles&#xA;    ├── base&#xA;    │   ├── README.md&#xA;    │   ├── defaults&#xA;    │   │   └── main.yml&#xA;    │   ├── files&#xA;    │   ├── handlers&#xA;    │   │   └── main.yml&#xA;    │   ├── meta&#xA;    │   │   └── main.yml&#xA;    │   ├── tasks&#xA;    │   │   ├── main.yml&#xA;    │   │   ├── setup_debian.yml&#xA;    │   │   └── setup_rhel.yml&#xA;    │   ├── templates&#xA;    │   └── vars&#xA;    │       └── main.yml&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In &lt;code&gt;tasks/main.yml&lt;/code&gt; we have:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

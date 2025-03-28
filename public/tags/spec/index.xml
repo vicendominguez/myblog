@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spec on VicenDominguez</title>
+    <link>//localhost:1313/tags/spec/</link>
+    <description>Recent content in Spec on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 14 Apr 2014 11:39:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/spec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>new perl package specs</title>
+      <link>//localhost:1313/posts/new-perl-package-specs/</link>
+      <pubDate>Mon, 14 Apr 2014 11:39:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/new-perl-package-specs/</guid>
+      <description>&lt;p&gt;From this post about those RPM perl modules: &lt;a href=&#34;http://vicendominguez.blogspot.com.es/2014/03/new-rpms-of-perl-modules-for-centos-6.html&#34;&gt;http://vicendominguez.blogspot.com.es/2014/03/new-rpms-of-perl-modules-for-centos-6.html&lt;/a&gt;, now, the ugly SPEC files in my git:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/vicendominguez/CentOS-SPECS&#34;&gt;https://github.com/vicendominguez/CentOS-SPECS&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;:)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MyDumper 0.6.1 RPM for CentOS 6.5</title>
+      <link>//localhost:1313/posts/mydumper-0.6.1-rpm-for-centos-6.5/</link>
+      <pubDate>Thu, 10 Apr 2014 11:49:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/mydumper-0.6.1-rpm-for-centos-6.5/</guid>
+      <description>&lt;p&gt;I made the last 0.6.0 mydumper RPM package a few days ago but there is a new release/version.&lt;/p&gt;&#xA;&lt;p&gt;From &lt;a href=&#34;http://www.mysqlperformanceblog.com/2014/03/10/new-mydumper-0-6-1-release-offers-several-performance-and-usability-features/&#34;&gt;MySQL Performance Blog&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;mydumper 0.6.0&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;#1250269 ensure statement is not bigger than statement_size&lt;/li&gt;&#xA;&lt;li&gt;#827328 myloader to set UNIQUE_CHECKS = 0 when importing&lt;/li&gt;&#xA;&lt;li&gt;#993714 Reducing the time spent with a global read lock&lt;/li&gt;&#xA;&lt;li&gt;#1250271 make it more obvious when mydumper is not successful&lt;/li&gt;&#xA;&lt;li&gt;#1250274 table doesnt exist should not be an error&lt;/li&gt;&#xA;&lt;li&gt;#987344 Primary key name not quoted in showed_nulls test&lt;/li&gt;&#xA;&lt;li&gt;#1075611 error when restoring tables with dashes in name&lt;/li&gt;&#xA;&lt;li&gt;#1124106 Mydumper/myloader does not care for 0-s in AUTO_INCREMENT fields&lt;/li&gt;&#xA;&lt;li&gt;#1125997 Timestamp data not portable between servers on differnt timezones&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;mydumper 0.6.1&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GPAC RPM CentOS 6</title>
+      <link>//localhost:1313/posts/gpac-rpm-centos-6/</link>
+      <pubDate>Fri, 28 Feb 2014 11:11:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/gpac-rpm-centos-6/</guid>
+      <description>&lt;p&gt;Please, I want to remind you my gpac rpm package:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/x86_64/gpac-0.5.0-2_noX.el6.x86_64.rpm&#34;&gt;gpac-0.5.0-2_noX.el6.x86_64.rpm&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For CentOS, it needs the atrpms repo:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/x86_64/gpac-0.5.0-2_noX.el6.x86_64.rpm&#34;&gt;gpac-0.5.0-2_noX.el6.x86_64.rpm&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;And you need to enable the repo. And you need this too:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/x86_64/gpac-libs-0.5.0-2_noX.el6.x86_64.rpm&#34;&gt;gpac-libs-0.5.0-2_noX.el6.x86_64.rpm&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Note: This compiled version is without xul (mozilla),gtk,imagemagick,X dependencies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MyDumper 0.6.0 RPM for CentOS 6.5</title>
+      <link>//localhost:1313/posts/mydumper-0.6.0-rpm-for-centos-6.5/</link>
+      <pubDate>Mon, 24 Feb 2014 15:43:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/mydumper-0.6.0-rpm-for-centos-6.5/</guid>
+      <description>&lt;p&gt;I had to make a tiny modification of the original mydumper 0.2 REMI SPEC file (&lt;a href=&#34;https://github.com/remicollet/remirepo/blob/master/mydumper/mydumper.spec&#34;&gt;https://github.com/remicollet/remirepo/blob/master/mydumper/mydumper.spec&lt;/a&gt;). For me, the &amp;ldquo;if&amp;rdquo; condition had problems in my rpmbuild environment.&lt;/p&gt;&#xA;&lt;p&gt;Here is the forked 0.6.0 SPEC file: &lt;a href=&#34;https://github.com/vicendominguez/CentOS-SPECS/blob/master/mydumper-0.6.0.spec&#34;&gt;https://github.com/vicendominguez/CentOS-SPECS/blob/master/mydumper-0.6.0.spec&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The rpm can be found here: &lt;a href=&#34;http://repo.enetres.net/repoview/mydumper.html&#34;&gt;http://repo.enetres.net/repoview/mydumper.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CentOS SPEC files repo created</title>
+      <link>//localhost:1313/posts/centos-spec-files-repo-created/</link>
+      <pubDate>Tue, 11 Feb 2014 14:22:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/centos-spec-files-repo-created/</guid>
+      <description>&lt;p&gt;I have created a new repo with some of my SPEC files for CentOS:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/vicendominguez/CentOS-SPECS&#34;&gt;https://github.com/vicendominguez/CentOS-SPECS&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;And you can find RPMs packages generated by my SPEC files for CentOS 6 here:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://repo.enetres.net/repoview/&#34;&gt;http://repo.enetres.net/repoview/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>SPEC RPM template</title>
+      <link>//localhost:1313/posts/spec-rpm-template/</link>
+      <pubDate>Wed, 11 Dec 2013 11:19:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/spec-rpm-template/</guid>
+      <description>&lt;p&gt;A good template to start:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/8820433.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;:)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

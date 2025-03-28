@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tmux on VicenDominguez</title>
+    <link>//localhost:1313/tags/tmux/</link>
+    <description>Recent content in Tmux on VicenDominguez</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 27 May 2012 10:01:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/tmux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My tmux.conf</title>
+      <link>//localhost:1313/posts/my-tmux.conf/</link>
+      <pubDate>Sun, 27 May 2012 10:01:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/my-tmux.conf/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;This is my old tmux conf from: &lt;script src=&#34;https://gist.github.com/vicendominguez/8802592.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;script src=&#34;https://gist.github.com/vicendominguez/8802592.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;:)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>
