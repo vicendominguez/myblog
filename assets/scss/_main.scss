@@ -259,9 +259,28 @@ em, i, strong {
   }
 }
 
-hr {  background: linear-gradient(to right, transparent, #00FFFF, transparent);
+hr {  
+  width: 100%;
+  border: none;
   height: 1px;
-  border: 0;
+  
+  background: linear-gradient(to right, transparent, #00FFFF, transparent);
+}
+
+.hidden {
+  display: none;
+}
+
+.hide-on-phone {
+  @media #{$media-size-phone} {
+    display: none;
+  }
+}
+
+.hide-on-tablet {
+  @media #{$media-size-tablet} {
+    display: none;
+  }
 }
 
 // Accessibility

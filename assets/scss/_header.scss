@@ -6,7 +6,6 @@
 
   background: $light-background-header;
 
-  
   @media (prefers-color-scheme: dark) {
     background: $dark-background-header;
   }
@@ -34,6 +33,7 @@
       flex-direction: row-reverse;
     }
   }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -44,7 +44,20 @@
   }
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.theme-toggler {
+  fill: currentColor;
+}
+
 .not-selectable {
+  user-select: none;
   -webkit-user-select: none;  
   -moz-user-select: none;    
   -ms-user-select: none;      
