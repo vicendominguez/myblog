@@ -1,65 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.Language }}">
-    <head>
-        {{ partial "head.html" . }}
-    <style>
-        /* Cyberpunk enhancements */
-        .cyber-about {
-            width: 50%;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            padding: 2rem;
-            background: rgba(10, 10, 10, 0.8);
-            border: 1px solid #FF00FF;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-        }
-
-        
-        .cyber-section {
-            padding: 0.7rem;
-            margin-bottom: 3rem;
-            border-left: 3px solid #00FFFF;
-            background: rgba(18, 18, 18, 0.6);
-        }
-        
-        .cyber-feed {
-            font-family: 'Courier New', monospace;
-            max-height: 300px;
-            overflow-y: auto;
-            scrollbar-color: #00FFFF #121212;
-        }
-        
-        .cyber-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .cyber-iframe {
-            border: 1px solid #FF00FF;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-        }
-
-        @media (max-width: 1024px) {
-    .cyber-about {
-        width: 70%;
-    }
-}
-
-@media (max-width: 768px) {
-    .cyber-about {
-        width: 90%;
-        grid-template-columns: 1fr; /* Apilar columnas en móviles */
-    }
-}
-    </style>
-</head>
-<body class="cyberpunk-theme">
-        <div class="container">
-            {{ partial "header.html" . }}
-            <div class="content">
+{{ define "main" }}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <main class="cyber-about">
         <!-- Left Column -->
         <div class="cyber-column">
@@ -75,21 +15,7 @@
                         class="cyber-iframe"
                         frameborder="0"></iframe>
             </section>
-        </div>
-        
-        <!-- Right Column -->
-        <div class="cyber-column">
-            
-            <section class="cyber-section">
-                <h2>> CODE_FEED [GITHUB]</h2>
-                <div class="cyber-feed" id="github-feed"></div>
-            </section>
-            
-            <section class="cyber-section">
-                <h2>> KERNEL_FEED</h2>
-                <div class="cyber-feed" id="kernel-feed"></div>
-            </section>
-            
+
             <section class="cyber-section">
                 <h2>> DISTRIBUTED_COMPUTE</h2>
               <a href="https://stats.free-dc.org/stats.php?page=userbycpid&cpid=54de5746ae97967e2f95bade7e5c257d"><img src="https://stats.free-dc.org/cpidtagb.php?cpid=54de5746ae97967e2f95bade7e5c257d&theme=3&cols=2" 
@@ -97,6 +23,26 @@
                      class="cyber-iframe">
               </a>
             </section>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="cyber-column">
+            
+            <section class="cyber-section">
+              <i class="devicon-github-plain" style="font-size: 80px;"></i>
+                <div class="cyber-feed" id="github-feed"></div>
+            </section>
+            
+            <section class="cyber-section">
+              <i class="devicon-linux-plain" style="font-size: 80px;"></i>
+                <div class="cyber-feed" id="kernel-feed"></div>
+            </section>
+
+            <section class="cyber-section">
+              <i class="devicon-debian-plain" style="font-size: 80px;"></i>
+              <div class="cyber-feed" id="debian-feed"></div>
+            </section>
+            
 <!--            
             <section class="cyber-section">
               <h2>> GITHUB_DEV_LANG</h2>
@@ -104,17 +50,15 @@
             </section>
 -->
         </div>
-    </main>
-    </div>
-  </div>
-    
     <!-- Feed Parser -->
     <script src="{{ "js/feed-parser.js" | relURL }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             loadFeed('http://github.com/vicendominguez.atom', 'github-feed');
             loadFeed('http://www.kernel.org/feeds/kdist.xml', 'kernel-feed');
+            loadFeed('https://www.debian.org/News/news', 'debian-feed');
         });
     </script>
-</body>
-</html>
+    </main>
+{{ end }}
+
