@@ -16,13 +16,12 @@ Fast installation in CentOS 7 for this "helper" to the queues service in Laravel
 
 Forked systemd init script (thx to [Jiangge Zhang](https://gist.github.com/tonyseek)) in `/usr/lib/systemd/system/supervisord.service`:
 
-```sh
-<script src="https://gist.github.com/vicendominguez/0da525e8870198652f63.js"></script>
-```
+
+{{< gist vicendominguez 0da525e8870198652f63 >}}
 
 And:
 
 1. `systemctl enable supervisord`
 2. `systemctl start supervisord`
 
-User=nginx is useful to run this process as nginx user. You can change it but the user must be in the system.
+`User=nginx` is useful to run this process as nginx user. You can change it but the user must be in the system.

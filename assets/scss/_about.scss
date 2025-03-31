@@ -1,5 +1,5 @@
 .cyber-about {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -27,22 +27,42 @@
 
 .cyber-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 }
 
 .cyber-iframe {
     border: 1px solid #FF00FF;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    max-height: 400px;
+}
+.cyber-x {
+    border: 1px solid #FF00FF;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    height: 400px;
+    width: 90%;
 }
 
-@media (max-width: 1024px) {
-  .cyber-about {
-    width: 70%;
+
+@media (max-width: 1220px) {
+
+  .cyber-iframe {
+    width: auto;
   }
+  
+  .cyber-section {
+    padding: 0.0rem;
+    margin-bottom: 3rem;
+    width: auto;
+  }
+
+  .cyber-about {
+    width: 90%;
+    -webkit-text-size-adjust: 70%;
+  }
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .cyber-about {
         width: 90%;
         grid-template-columns: 1fr; /* Apilar columnas en móviles */
