@@ -18,4 +18,4 @@ REPO: [https://github.com/vicendominguez/wowza-zabbix-template](https://github.c
 
 Screenshot:
 
-![Zabbix Wowza Graph](http://2.bp.blogspot.com/-6IeZxQqAsfo/UvidZoiXG0I/AAAAAAAAA5k/-9lAbEZ46F4/s1600/zabbix-wowza-graph.png)
+![Zabbix Wowza Graph](https://raw.githubusercontent.com/vicendominguez/sockstat-zabbix-module/master/img/zabbix-sockstat.png)

@@ -39,7 +39,7 @@ It permits a fast configuration because of you can apply the same template to al
 
 Of course, it can be to work in the agent/client side too.
 
-[![memcached-zabbix](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpiUlNdvoxQJZZxAHPYhA0C2heL0beqwGeuhuEFhCEiHQWRrB3dJvkQOwIWjVO8L1f0iuaoZzSyElR_3Rz2_ufOQMPkd_vyR93Vqg7ams1QDriPiQPahtN0j-h9cI4oCoh5yvFpXA2NmM/s1600/memcached-zabbix.jpg)](https://github.com/vicendominguez/memcached-zabbix-template)
+![memcached-zabbix](https://raw.githubusercontent.com/vicendominguez/memcached-zabbix-template/master/img/memcached-zabbix.jpg)
 
 You can find it in my repo: [https://github.com/vicendominguez/memcached-zabbix-template](https://github.com/vicendominguez/memcached-zabbix-template)
 
