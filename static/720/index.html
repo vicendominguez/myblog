@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo del 720 Saldo Medio WISE ultimo trimestre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <style>
+        body { padding-bottom: 50px; }
+        .container { max-width: 800px; margin-top: 30px; }
+        .progress { height: 25px; margin-bottom: 20px; }
+        .instructions { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; font-size: 0.95em;}
+        .error-message { color: red; font-size: 0.9em; margin-top: 5px; }
+        #logOutput { height: 200px; overflow-y: scroll; background-color: #f5f5f5; padding: 10px; border: 1px solid #dee2e6; border-radius: .25rem; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Calculadora 720 de Saldo Medio desde WISE</h1>
+        <h3 class="text-center mb-4">Todo el proceso se realiza en el navegador.</h3>
+        <h3 class="text-center mb-4">Ni hay server ni se envia nada. Puro js y html.</h3>
+
+        <div class="instructions">
+            <h4>Instrucciones:</h4>
+            <ol>
+                <li> Descarga el fichero desde WISE (extractos e informes -  Extracto - 1Oct/31Dic - Formato CSV) 
+                <li>Introduce el <strong>Saldo Inicial</strong> (a 30 de Septiembre del año a calcular).</li>
+                <li>Indica cómo encontrar las columnas de <strong>Fecha</strong> e <strong>Importe</strong> en tu CSV:
+                    <ul>
+                        <li>Escribe el <strong>número</strong> de columna (<code>1</code>, <code>2</code>, ...).</li>
+              <li>O escribe el <strong>nombre exacto</strong> de la cabecera (ej: <code>Date</code> o <code>Amount</code>).</li>
+                    </ul>
+                </li>
+                <li>Sube tu archivo <strong>CSV</strong> (1ª fila cabeceras; Fecha ej: <code>DD-MM-YYYY</code>; Decimales con <code>.</code>).</li>
+                <li>Pulsa "Procesar Archivo". Se calculará para el periodo 1/Oct al 31/Dic del año anterior al actual.</li>
+                <li>Descarga el archivo Excel con el detalle diario y el saldo medio.</li>
+            </ol>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                Configuración y Procesamiento
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="initialBalanceInput" class="form-label">Saldo Inicial (€):</label>
+                    <input type="number" step="0.01" class="form-control" id="initialBalanceInput" placeholder="Saldo antes del 1 de Octubre">
+                    <div id="balanceError" class="error-message" style="display: none;"></div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="dateColumnInput" class="form-label">Columna de Fecha:</label>
+                        <input type="text" class="form-control" id="dateColumnInput" placeholder="Número o Nombre">
+                         <div id="dateColError" class="error-message" style="display: none;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="amountColumnInput" class="form-label">Columna de Importe:</label>
+                        <input type="text" class="form-control" id="amountColumnInput" placeholder="Número o Nombre">
+                        <div id="amountColError" class="error-message" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fileInput" class="form-label">Selecciona Archivo CSV:</label>
+                    <input class="form-control" type="file" id="fileInput" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                     <div id="fileError" class="error-message" style="display: none;"></div>
+                </div>
+
+                <div class="progress" id="progressBar" style="display: none;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                </div>
+                <button id="processBtn" class="btn btn-primary" disabled>Procesar Archivo</button>
+                <button id="downloadBtn" class="btn btn-success" style="display: none;">Descargar Resultados</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Registro de Procesamiento</div>
+            <div class="card-body">
+                <div id="logOutput"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Variables Globales ---
+        let processedResults = null;
+        let outputFileName = 'saldos_diarios_calculados.xlsx';
+
+        // --- Elementos del DOM ---
+        const fileInput = document.getElementById('fileInput');
+        const initialBalanceInput = document.getElementById('initialBalanceInput');
+        const dateColumnInput = document.getElementById('dateColumnInput');
+        const amountColumnInput = document.getElementById('amountColumnInput');
+        const processBtn = document.getElementById('processBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progressBarInner = progressBar.querySelector('.progress-bar');
+        const logOutput = document.getElementById('logOutput');
+        const balanceError = document.getElementById('balanceError');
+        const dateColError = document.getElementById('dateColError');
+        const amountColError = document.getElementById('amountColError');
+        const fileError = document.getElementById('fileError');
+
+        // --- Event Listeners ---
+        [fileInput, initialBalanceInput, dateColumnInput, amountColumnInput].forEach(input => {
+            input.addEventListener('input', checkEnableProcessButton); // 'input' es mejor para cambios inmediatos
+            input.addEventListener('change', checkEnableProcessButton); // 'change' para file input
+        });
+        processBtn.addEventListener('click', processFile);
+        downloadBtn.addEventListener('click', downloadResults);
+
+        // --- Funciones Auxiliares UI ---
+        function checkEnableProcessButton() {
+            const file = fileInput.files[0];
+            const balance = initialBalanceInput.value;
+            const dateCol = dateColumnInput.value.trim();
+            const amountCol = amountColumnInput.value.trim();
+            processBtn.disabled = !(file && balance !== '' && dateCol !== '' && amountCol !== '');
+
+            // Opcional: Ocultar errores al escribir
+            if (file) fileError.style.display = 'none';
+            if (balance !== '') balanceError.style.display = 'none';
+            if (dateCol !== '') dateColError.style.display = 'none';
+            if (amountCol !== '') amountColError.style.display = 'none';
+        }
+
+        function addToLog(message, type = 'info') {
+            const logEntry = document.createElement('div');
+            logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            if (type === 'error') logEntry.style.color = 'red';
+            else if (type === 'success') logEntry.style.color = 'green';
+            logOutput.appendChild(logEntry);
+            logOutput.scrollTop = logOutput.scrollHeight;
+        }
+
+        function updateProgress(percent, isError = false) {
+            progressBar.style.display = 'block';
+            progressBarInner.style.width = `${percent}%`;
+            progressBarInner.setAttribute('aria-valuenow', percent);
+            progressBarInner.classList.toggle('bg-danger', isError);
+            progressBarInner.classList.toggle('progress-bar-animated', percent < 100 && !isError);
+        }
+
+        function resetUI() {
+             [balanceError, dateColError, amountColError, fileError].forEach(el => el.style.display = 'none');
+             processBtn.disabled = true;
+             downloadBtn.style.display = 'none';
+             downloadBtn.disabled = true;
+             progressBar.style.display = 'none';
+             updateProgress(0);
+             processedResults = null;
+             logOutput.innerHTML = ''; // Limpiar log anterior
+        }
+
+        // --- Procesamiento Principal ---
+        async function processFile() {
+            resetUI();
+            addToLog('Iniciando proceso...');
+
+            const file = fileInput.files[0];
+            const initialBalanceStr = initialBalanceInput.value;
+            const dateColSpecifier = dateColumnInput.value.trim();
+            const amountColSpecifier = amountColumnInput.value.trim();
+
+            // Validaciones
+            let hasError = false;
+            if (!file) { fileError.textContent = 'Selecciona un archivo CSV.'; fileError.style.display = 'block'; hasError = true; }
+            if (initialBalanceStr === '' || isNaN(parseFloat(initialBalanceStr))) { balanceError.textContent = 'Introduce un saldo inicial numérico válido.'; balanceError.style.display = 'block'; hasError = true; }
+            if (dateColSpecifier === '') { dateColError.textContent = 'Especifica la columna de fecha.'; dateColError.style.display = 'block'; hasError = true; }
+            if (amountColSpecifier === '') { amountColError.textContent = 'Especifica la columna de importe.'; amountColError.style.display = 'block'; hasError = true; }
+
+            if (hasError) { addToLog('Error: Faltan datos o son inválidos en el formulario.', 'error'); updateProgress(100, true); return; }
+
+            const initialBalance = parseFloat(initialBalanceStr);
+            addToLog(`Archivo: ${file.name}, Saldo inicial: ${initialBalance.toFixed(2)} €, Col Fecha: "${dateColSpecifier}", Col Importe: "${amountColSpecifier}"`);
+            updateProgress(10);
+            processBtn.disabled = true;
+
+            try {
+                const data = await file.arrayBuffer();
+                updateProgress(20);
+                addToLog('Archivo leído.');
+
+                const workbook = XLSX.read(data, { type: 'array', cellDates: true });
+                const firstSheetName = workbook.SheetNames[0];
+                const worksheet = workbook.Sheets[firstSheetName];
+                const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: '', raw: false });
+
+                if (jsonData.length < 1) throw new Error("El archivo CSV parece estar vacío.");
+                updateProgress(30);
+                addToLog(`Hoja "${firstSheetName}" parseada (${jsonData.length} filas incl. cabecera).`);
+
+                // Llamada a la lógica de cálculo
+                processedResults = calculateDailyBalancesAndAvg(jsonData, initialBalance, dateColSpecifier, amountColSpecifier);
+
+                if (!processedResults) { throw new Error("El cálculo de saldos no devolvió resultados."); } // Error si la función devuelve null
+
+                updateProgress(100);
+                addToLog('Cálculo completado con éxito.', 'success');
+                downloadBtn.style.display = 'inline-block';
+                downloadBtn.disabled = false;
+                // Nombre de archivo descriptivo
+                const filePrefix = file.name.replace(/\.[^/.]+$/, "");
+                const dateDesc = isNaN(parseInt(dateColSpecifier)) ? dateColSpecifier : `Col${dateColSpecifier}`;
+                const amountDesc = isNaN(parseInt(amountColSpecifier)) ? amountColSpecifier : `Col${amountColSpecifier}`;
+                outputFileName = `${filePrefix}_saldos_Q4_${dateDesc}_${amountDesc}.xlsx`;
+
+            } catch (error) {
+                addToLog(`Error: ${error.message}`, 'error');
+                console.error("Processing Error Details:", error);
+                updateProgress(100, true);
+                processBtn.disabled = false; // Permitir reintentar
+            }
+        }
+
+        // --- Lógica de Cálculo de Saldos ---
+        function calculateDailyBalancesAndAvg(jsonData, initialBalance, dateColSpecifier, amountColSpecifier) {
+            if (!jsonData || jsonData.length === 0) throw new Error("No hay datos (ni cabecera) para procesar.");
+
+            const headers = jsonData[0].map(h => String(h).trim());
+            addToLog(`Cabeceras encontradas: ${headers.join(' | ')}`);
+
+            // Función auxiliar para encontrar índice
+            function findColumnIndex(specifier, headerArray, columnType) {
+                const potentialNumber = parseInt(specifier);
+                if (!isNaN(potentialNumber) && potentialNumber > 0) { // Número columna (1-based)
+                    const zeroBasedIndex = potentialNumber - 1;
+                    if (zeroBasedIndex < headerArray.length) {
+                        addToLog(`Columna ${columnType}: Usando nº ${potentialNumber} -> Índice ${zeroBasedIndex} ("${headerArray[zeroBasedIndex]}")`);
+                        return zeroBasedIndex;
+                    } else { throw new Error(`Columna ${columnType}: Número ${potentialNumber} fuera de rango (1 a ${headerArray.length}).`); }
+                } else { // Nombre columna (string)
+                    const lowerCaseSpecifier = specifier.toLowerCase();
+                    const index = headerArray.findIndex(h => h.toLowerCase() === lowerCaseSpecifier);
+                    if (index !== -1) {
+                        addToLog(`Columna ${columnType}: Usando nombre "${specifier}" -> Índice ${index} ("${headerArray[index]}")`);
+                        return index;
+                    } else { throw new Error(`Columna ${columnType}: No se encontró cabecera "${specifier}".`); }
+                }
+            }
+
+            let dateColIndex, amountColIndex;
+            try {
+                 dateColIndex = findColumnIndex(dateColSpecifier, headers, 'Fecha');
+                 amountColIndex = findColumnIndex(amountColSpecifier, headers, 'Importe');
+            } catch (error) {
+                 // Mostrar error específico en el formulario y relanzar
+                 if (error.message.includes('Fecha')) { dateColError.textContent = error.message; dateColError.style.display = 'block'; }
+                 else if (error.message.includes('Importe')) { amountColError.textContent = error.message; amountColError.style.display = 'block'; }
+                 throw error;
+            }
+            updateProgress(40);
+
+            // Preparar Mapa de Operaciones
+            const operations = new Map();
+            let parseErrors = 0;
+            for (let i = 1; i < jsonData.length; i++) {
+                const row = jsonData[i];
+                const dateVal = row[dateColIndex];
+                const amountVal = row[amountColIndex];
+
+                // Parsear Fecha (Prioriza DD-MM-YYYY)
+                let dateObj;
+                if (dateVal instanceof Date && !isNaN(dateVal)) {
+                    dateObj = dateVal;
+                } else if (typeof dateVal === 'string' && dateVal.trim() !== '') {
+                    const dateString = dateVal.trim();
+                    const match = dateString.match(/^(\d{1,2})[-./](\d{1,2})[-./](\d{4})$/); // DD-MM-YYYY
+                    if (match) {
+                        const day = parseInt(match[1], 10), month = parseInt(match[2], 10), year = parseInt(match[3], 10);
+                        if (month >= 1 && month <= 12 && day >= 1 && day <= 31) {
+                            dateObj = new Date(Date.UTC(year, month - 1, day)); // Month 0-indexed
+                            if (isNaN(dateObj.getTime()) || dateObj.getUTCMonth() !== month - 1) dateObj = undefined; // Validar construcción
+                        } else dateObj = undefined;
+                    } else {
+                        dateObj = new Date(dateString); // Fallback parseo nativo
+                        if (isNaN(dateObj.getTime())) dateObj = undefined;
+                    }
+                }
+
+                // Parsear Importe (Decimal con '.')
+                let amount = null;
+                if (amountVal === 0) amount = 0;
+                else if (typeof amountVal === 'number') amount = amountVal;
+                else if (typeof amountVal === 'string' && amountVal.trim() !== '') {
+                    const cleanedAmount = amountVal.replace(/[^0-9.,-]/g, '').replace(',', '.'); // Limpiar, asegurar punto decimal
+                    const parsed = parseFloat(cleanedAmount);
+                    if (!isNaN(parsed)) amount = parsed;
+                }
+
+                // Si fecha u importe fallan, saltar fila
+                if (!dateObj || amount === null) {
+                    if(dateVal || amountVal) parseErrors++;
+                    continue;
+                }
+
+                // Generar clave y añadir al mapa
+                const dateKey = `${dateObj.getUTCFullYear()}-${String(dateObj.getUTCMonth() + 1).padStart(2, '0')}-${String(dateObj.getUTCDate()).padStart(2, '0')}`;
+                operations.set(dateKey, (operations.get(dateKey) || 0) + amount);
+            }
+            if (parseErrors > 0) addToLog(`Aviso: ${parseErrors} filas de datos ignoradas por formato inválido de fecha o importe.`);
+            addToLog(`Operaciones parseadas: ${operations.size} días con movimientos.`);
+            updateProgress(50);
+
+            // Determinar Rango de Fechas (Fijo: Q4 Año Anterior)
+            const today = new Date();
+            const previousYear = today.getFullYear() - 1;
+            const startDate = new Date(Date.UTC(previousYear, 9, 1)); // Oct 1st (Month 9)
+            const endDate = new Date(Date.UTC(previousYear, 11, 31)); // Dec 31st (Month 11)
+            if (isNaN(startDate) || isNaN(endDate)) throw new Error(`Error al generar fechas para Q4 del ${previousYear}.`);
+            addToLog(`Calculando saldos para periodo fijo: ${startDate.toISOString().slice(0, 10)} a ${endDate.toISOString().slice(0, 10)} (Q4 ${previousYear})`);
+            updateProgress(60);
+
+            // Calcular Saldos Diarios (Iteración)
+            let dailyData = [];
+            let balance = initialBalance;
+            let sumBalances = 0;
+            let days = 0;
+            let currentDate = new Date(startDate);
+            console.log(`--- Iniciando Bucle Cálculo Diario (Consola) | Saldo Inicial: ${initialBalance.toFixed(2)} ---`);
+
+            while (currentDate <= endDate) {
+                days++;
+                const dateKey = `${currentDate.getUTCFullYear()}-${String(currentDate.getUTCMonth() + 1).padStart(2, '0')}-${String(currentDate.getUTCDate()).padStart(2, '0')}`;
+                const transactionAmount = operations.get(dateKey) || 0;
+                const balanceBeforeTransaction = balance;
+
+                balance += transactionAmount;
+                sumBalances += balance;
+
+                // CONSOLE LOG para Debugging
+                console.log(`CONSOLE DEBUG: Día ${days} (${dateKey}) | Mov=${transactionAmount.toFixed(2)} | Saldo Ant=${balanceBeforeTransaction.toFixed(2)} | Saldo Act=${balance.toFixed(2)} | Suma Acum=${sumBalances.toFixed(2)}`);
+
+                dailyData.push({ date: dateKey, transaction: transactionAmount, balance: balance });
+                currentDate.setUTCDate(currentDate.getUTCDate() + 1); // Avanzar día
+
+                if (days % 5 === 0) updateProgress(60 + (days / 92) * 30); // Progreso aprox.
+            }
+            updateProgress(90);
+            console.log('--- Fin Bucle Cálculo Diario (Consola) ---');
+
+            if (days === 0) throw new Error("El rango de fechas Q4 no contiene días.");
+            const averageDailyBalance = sumBalances / days;
+            const finalLogMsg = `Cálculo Final: Total Días=${days}, Suma Final Saldos=${sumBalances.toFixed(2)}, Media=${averageDailyBalance.toFixed(2)}`;
+            console.log(finalLogMsg);
+            addToLog(`Cálculo completado. Días: ${days}. Suma saldos: ${sumBalances.toFixed(2)} €. Media: ${averageDailyBalance.toFixed(2)} €`);
+
+            return { dailyData, averageDailyBalance };
+        }
+
+        // --- Descarga de Resultados ---
+        function downloadResults() {
+             if (!processedResults || !processedResults.dailyData) {
+                 addToLog("Error: No hay datos procesados para descargar.", 'error');
+                 return;
+             }
+             addToLog('Preparando archivo Excel...');
+             const { dailyData, averageDailyBalance } = processedResults;
+
+             let aoaData = [ ["Fecha", "Movimiento Diario (€)", "Saldo al Final del Día (€)"] ];
+             dailyData.forEach(item => { aoaData.push([ item.date, item.transaction, item.balance ]); });
+             aoaData.push([]); // Fila vacía
+             aoaData.push(["Saldo Medio Diario (Q4 calculado):", "", averageDailyBalance.toFixed(2)]);
+
+             const newWorkbook = XLSX.utils.book_new();
+             const newWorksheet = XLSX.utils.aoa_to_sheet(aoaData);
+             newWorksheet['!cols'] = [ { wch: 12 }, { wch: 20 }, { wch: 25 } ]; // Anchos columna
+             XLSX.utils.book_append_sheet(newWorkbook, newWorksheet, "Saldos Calculados Q4");
+
+             try {
+                 XLSX.writeFile(newWorkbook, outputFileName);
+                 addToLog(`Archivo "${outputFileName}" generado.`, 'success');
+             } catch (error) {
+                 addToLog(`Error al generar Excel: ${error.message}`, 'error');
+                 console.error("Download Error:", error);
+             }
+        }
+
+    </script>
+</body>
+</html>
